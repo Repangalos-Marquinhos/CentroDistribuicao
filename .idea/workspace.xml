@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b2a72bcf-513b-4c6f-a988-6dbe6973449d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/program2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/DB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/DbException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/DbIntegrityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/CidadeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/EstadoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/LoteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/PedidoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/ProdutoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/SecaoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/UsuarioDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/CidadeDaoJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/DaoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/EstadoDaoJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/LoteDaoJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/UsuarioDaoJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/entities/Cidade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/entities/Estado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/entities/Lote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/entities/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/entities/Secao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/entities/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/services/GoogleMapsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/services/Utilidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aplicativo/Aplicativo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aplicativo/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+    </list>
+    <list id="0d8530e9-6ee9-4aa1-bbcb-ea93c8ba0c09" name="Changes by OJUNIOR1970" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/entities/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aplicativo/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Fidelis09&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Repangalos-Marquinhos/CentroDistribuicao.git&quot;,
+    &quot;accountId&quot;: &quot;bea7c81b-3892-4697-be9e-363ecaa902f3&quot;
+  }
+}</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/application/Program.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="b2a72bcf-513b-4c6f-a988-6dbe6973449d" />
+        <range start1="2" end1="2" start2="2" end2="4" changelist="0d8530e9-6ee9-4aa1-bbcb-ea93c8ba0c09" />
+        <range start1="3" end1="4" start2="5" end2="88" changelist="0d8530e9-6ee9-4aa1-bbcb-ea93c8ba0c09" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2xEWs1UuE3ZoSfwN8H236MD19Fb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Program.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Usuario.executor&quot;: &quot;Run&quot;,
+    &quot;Application.program2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="db.impl" />
+      <recent name="db" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.program2">
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Program" />
+      <module name="CentroDistribuicao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="program2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.program2" />
+      <module name="CentroDistribuicao" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.program2" />
+        <item itemvalue="Application.Program" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b2a72bcf-513b-4c6f-a988-6dbe6973449d" name="Changes" comment="" />
+      <created>1747503915449</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747503915449</updated>
+      <workItem from="1747503916711" duration="3429000" />
+      <workItem from="1747507374013" duration="15506000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
