@@ -70,7 +70,7 @@ public class Program2 {
 
     private static void testPedidoDao(Connection conn) {
         System.out.println("===== PedidoDao Tests =====");
-        Usuario usuario = new Usuario(1, "12345");
+        Usuario usuario = new Usuario("1", 12345);
         PedidoDao pedidoDao = new PedidoDaoJDBC(conn);
         Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), null, usuario);
         pedidoDao.insert(pedido);

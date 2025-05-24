@@ -6,13 +6,13 @@ import java.util.Objects;
 public class Produto {
 
     private int id_produto;
-    private String descriçao;
+    private String descricao;
     private Secao secao;
     private Date data_armazenamento;
 
-    public Produto(int id_produto, String descriçao, Secao secao, Date data_armazenamento) {
+    public Produto(int id_produto, String descricao, Secao secao, Date data_armazenamento) {
         this.id_produto = id_produto;
-        this.descriçao = descriçao;
+        this.descricao = descricao;
         this.secao = secao;
         this.data_armazenamento = data_armazenamento;
     }
@@ -25,12 +25,12 @@ public class Produto {
         this.data_armazenamento = data_armazenamento;
     }
 
-    public String getDescriçao() {
-        return descriçao;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescriçao(String descriçao) {
-        this.descriçao = descriçao;
+    public void setDescricao(String descriçao) {
+        this.descricao = descriçao;
     }
 
     public int getId_produto() {
@@ -54,7 +54,7 @@ public class Produto {
         return "Produto{" +
                 "data_armazenamento=" + data_armazenamento +
                 ", id_produto=" + id_produto +
-                ", descriçao='" + descriçao + '\'' +
+                ", descriçao='" + descricao + '\'' +
                 ", secao=" + secao +
                 '}';
     }
@@ -63,11 +63,11 @@ public class Produto {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Produto produto = (Produto) o;
-        return id_produto == produto.id_produto && Objects.equals(descriçao, produto.descriçao) && Objects.equals(secao, produto.secao) && Objects.equals(data_armazenamento, produto.data_armazenamento);
+        return id_produto == produto.id_produto && Objects.equals(descricao, produto.descricao) && Objects.equals(secao, produto.secao) && Objects.equals(data_armazenamento, produto.data_armazenamento);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id_produto, descriçao, secao, data_armazenamento);
+        return Objects.hash(id_produto, descricao, secao, data_armazenamento);
     }
 }
