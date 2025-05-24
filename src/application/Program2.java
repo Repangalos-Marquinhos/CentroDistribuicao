@@ -27,7 +27,7 @@ public class Program2 {
     private static void testSecaoDao(Connection conn) {
         System.out.println("===== SecaoDao Tests =====");
         SecaoDao secaoDao = new SecaoDaoJDBC(conn);
-        Secao secao = new Secao(null, "Eletrônicos");
+        Secao secao = new Secao(1, "Eletrônicos");
         secaoDao.insert(secao);
         System.out.println("Inserted: " + secao);
 
@@ -48,7 +48,7 @@ public class Program2 {
         System.out.println("===== ProdutoDao Tests =====");
         Secao secao = new Secao(1, "Eletrônicos Atualizados");
         ProdutoDao produtoDao = new ProdutoDaoJDBC(conn);
-        Produto produto = new Produto(null, "Celular", secao, new Date(System.currentTimeMillis()));
+        Produto produto = new Produto(32, "Celular", secao, new Date(System.currentTimeMillis()));
         produtoDao.insert(produto);
         System.out.println("Inserted: " + produto);
 
@@ -72,7 +72,7 @@ public class Program2 {
         System.out.println("===== PedidoDao Tests =====");
         Usuario usuario = new Usuario("1", 12345);
         PedidoDao pedidoDao = new PedidoDaoJDBC(conn);
-        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), null, usuario);
+        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 7, usuario);
         pedidoDao.insert(pedido);
         System.out.println("Inserted: " + pedido);
 
@@ -95,7 +95,7 @@ public class Program2 {
     private static void testLoteDao(Connection conn) {
         System.out.println("===== LoteDao Tests =====");
         Produto produto = new Produto(1, "Celular Atualizado", new Secao(1, "Eletrônicos Atualizados"), new Date(System.currentTimeMillis()));
-        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 1, new Usuario(1, "12345"));
+        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 1, new Usuario("1", 12345));
         Cidade cidade = new Cidade(1, "São Paulo");
         Estado estado = new Estado(1, "São Paulo", "SP");
         LoteDao loteDao = new LoteDaoJDBC(conn);
