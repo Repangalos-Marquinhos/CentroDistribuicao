@@ -22,11 +22,10 @@ public class EstadoDaoJDBC implements EstadoDao {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement(
-                    "INSERT INTO estado (estado, sigla) VALUES (?, ?)",
+                    "INSERT INTO estado (UF, sigla) VALUES (?, ?)",
                     Statement.RETURN_GENERATED_KEYS
             );
-
-            st.setString(1, estado.getEstado());
+            st.setString(1, estado.getEstado()); // ou getNome() dependendo do nome do campo na sua classe
             st.setString(2, estado.getSigla());
 
             int rowsAffected = st.executeUpdate();
@@ -53,9 +52,9 @@ public class EstadoDaoJDBC implements EstadoDao {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement(
-                    "UPDATE estado SET estado = ?, sigla = ? WHERE id_estado = ?"
+                    "UPDATE estado SET UF = ?, sigla = ? WHERE id_estado = ?"
             );
-            st.setString(1, estado.getEstado());
+            st.setString(1, estado.getEstado()); // ou getNome()
             st.setString(2, estado.getSigla());
             st.setInt(3, estado.getId_estado());
             st.executeUpdate();
@@ -129,7 +128,7 @@ public class EstadoDaoJDBC implements EstadoDao {
     private Estado instantiateEstado(ResultSet rs) throws SQLException {
         return new Estado(
                 rs.getInt("id_estado"),
-                rs.getString("estado"),
+                rs.getString("UF"),        // <- aqui está o ajuste
                 rs.getString("sigla")
         );
     }

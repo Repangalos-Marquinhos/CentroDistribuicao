@@ -26,7 +26,7 @@ public class PedidoDaoJDBC implements PedidoDao {
                     "INSERT INTO pedido (numero_pedido, id_user, data_pedido) VALUES (?, ?, ?)"
             );
             st.setInt(1, pedido.getId());
-            st.setInt(2, pedido.getUsuario().getId());
+            st.setInt(2, pedido.getId_usuario().getId());
             st.setDate(3, new java.sql.Date(pedido.getData_pedido().getTime()));
             st.executeUpdate();
         } catch (SQLException e) {
@@ -43,7 +43,7 @@ public class PedidoDaoJDBC implements PedidoDao {
             st = conn.prepareStatement(
                     "UPDATE pedido SET id_user = ?, data_pedido = ? WHERE numero_pedido = ?"
             );
-            st.setInt(1, pedido.getUsuario().getId());
+            st.setInt(1, pedido.getId_usuario().getId());
             st.setDate(2, new java.sql.Date(pedido.getData_pedido().getTime()));
             st.setInt(3, pedido.getId());
             st.executeUpdate();
@@ -80,7 +80,7 @@ public class PedidoDaoJDBC implements PedidoDao {
             st.setInt(1, id);
             rs = st.executeQuery();
             if (rs.next()) {
-                Usuario usuario = new Usuario(rs.getInt("id_user"), rs.getString("senha"));
+                Usuario usuario = new Usuario(rs.getString("senha"), rs.getInt("id_user"));
                 return new Pedido(rs.getDate("data_pedido"), rs.getInt("numero_pedido"), usuario);
             }
             return null;
@@ -105,7 +105,7 @@ public class PedidoDaoJDBC implements PedidoDao {
 
             List<Pedido> list = new ArrayList<>();
             while (rs.next()) {
-                Usuario usuario = new Usuario(rs.getInt("id_user"), rs.getString("senha"));
+                Usuario usuario = new Usuario(rs.getString("senha"), rs.getInt("id_user") );
                 Pedido pedido = new Pedido(rs.getDate("data_pedido"), rs.getInt("numero_pedido"), usuario);
                 list.add(pedido);
             }
@@ -132,7 +132,7 @@ public class PedidoDaoJDBC implements PedidoDao {
 
             List<Pedido> list = new ArrayList<>();
             while (rs.next()) {
-                Usuario usuario = new Usuario(rs.getInt("id_user"), rs.getString("senha"));
+                Usuario usuario = new Usuario(rs.getString("senha"),rs.getInt("id_user"));
                 Pedido pedido = new Pedido(rs.getDate("data_pedido"), rs.getInt("numero_pedido"), usuario);
                 list.add(pedido);
             }

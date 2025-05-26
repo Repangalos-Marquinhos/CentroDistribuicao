@@ -23,7 +23,7 @@ public class ProdutoDaoJDBC implements ProdutoDao {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement(
-                    "INSERT INTO produtos (descricao, secao, data_armazenamento) VALUES (?, ?, ?)"
+                    "INSERT INTO produtos (descricao, secao, data_armazenmento) VALUES (?, ?, ?)"
             );
             st.setString(1, produto.getDescricao());
             st.setInt(2, produto.getSecao().getId_secao());
@@ -41,7 +41,7 @@ public class ProdutoDaoJDBC implements ProdutoDao {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement(
-                    "UPDATE produtos SET descricao = ?, secao = ?, data_armazenamento = ? WHERE id_produto = ?"
+                    "UPDATE produtos SET descricao = ?, secao = ?, data_armazenmento = ? WHERE id_produto = ?"
             );
             st.setString(1, produto.getDescricao());
             st.setInt(2, produto.getSecao().getId_secao());
@@ -104,7 +104,7 @@ public class ProdutoDaoJDBC implements ProdutoDao {
             List<Produto> list = new ArrayList<>();
             while (rs.next()) {
                 Secao secao = new Secao(rs.getInt("id_secao"), rs.getString("nome_secao"));
-                Produto produto = new Produto(rs.getInt("id_produto"), rs.getString("descricao"), secao, rs.getDate("data_armazenamento"));
+                Produto produto = new Produto(rs.getInt("id_produto"), rs.getString("descricao"), secao, rs.getDate("data_armazenmento"));
                 list.add(produto);
             }
             return list;
@@ -127,7 +127,7 @@ public class ProdutoDaoJDBC implements ProdutoDao {
             List<Produto> list = new ArrayList<>();
             while (rs.next()) {
                 Secao secao = new Secao(rs.getInt("id_secao"), rs.getString("nome_secao"));
-                Produto produto = new Produto(rs.getInt("id_produto"), rs.getString("descricao"), secao, rs.getDate("data_armazenamento"));
+                Produto produto = new Produto(rs.getInt("id_produto"), rs.getString("descricao"), secao, rs.getDate("data_armazenmento"));
                 list.add(produto);
             }
             return list;

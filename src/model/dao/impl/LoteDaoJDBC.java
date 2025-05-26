@@ -22,7 +22,7 @@ public class LoteDaoJDBC implements LoteDao {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement(
-                    "INSERT INTO lote (id_produto, destino, id_cidade, id_estado, cep, id_pedido) " +
+                    "INSERT INTO lote (id_produto, destino, cidade, estado, cep, numero_pedido) " +
                             "VALUES (?, ?, ?, ?, ?, ?)"
             );
 
@@ -47,8 +47,8 @@ public class LoteDaoJDBC implements LoteDao {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement(
-                    "UPDATE lote SET destino = ?, id_cidade = ?, id_estado = ?, cep = ? " +
-                            "WHERE id_produto = ? AND id_pedido = ?"
+                    "UPDATE lote SET destino = ?, cidade = ?, estado = ?, cep = ? " +
+                            "WHERE id_produto = ? AND numero_pedido = ?"
             );
 
             st.setString(1, lote.getDestino());
@@ -93,7 +93,7 @@ public class LoteDaoJDBC implements LoteDao {
         ResultSet rs = null;
         try {
             st = conn.prepareStatement(
-                    "SELECT l.*, p.descricao, p.data_armazenamento, s.id_secao, "
+                    "SELECT l.*, p.descricao, p.data_armazenmento, s.id_secao, "
                     +"s.descricao AS nome_secao, c.id_cidade, c.cidade, e.id_estado, "
                     +"e.UF AS estado, e.sigla, pd.numero_pedido AS id_pedido, pd.data_pedido, "
                     +"u.id_user AS id_usuario, u.senha AS senha_usuario "
@@ -130,16 +130,19 @@ public class LoteDaoJDBC implements LoteDao {
         ResultSet rs = null;
         try {
             st = conn.prepareStatement(
-                    "SELECT l.*, p.descriçao, p.data_armazenamento, s.id_secao, s.nome AS nome_secao, " +
-                            "c.id_cidade, c.cidade, e.id_estado, e.estado, e.sigla, " +
-                            "pd.id AS id_pedido, pd.data_pedido, u.id AS id_usuario, u.nome AS nome_usuario " +
+                    "SELECT l.*, " +
+                            "p.descricao, p.data_armazenmento, s.id_secao, s.descricao AS nome_secao, " +
+                            "c.id_cidade, c.cidade, " +
+                            "e.id_estado, e.UF AS estado, e.sigla, " +
+                            "pd.numero_pedido AS id_pedido, pd.data_pedido, " +
+                            "u.id_user AS id_usuario, u.senha AS senha_usuario " +
                             "FROM lote l " +
-                            "JOIN produto p ON l.id_produto = p.id_produto " +
-                            "JOIN secao s ON p.id_secao = s.id_secao " +
-                            "JOIN cidade c ON l.id_cidade = c.id_cidade " +
-                            "JOIN estado e ON l.id_estado = e.id_estado " +
-                            "JOIN pedido pd ON l.id_pedido = pd.id " +
-                            "JOIN usuario u ON pd.id_usuario = u.id"
+                            "JOIN produtos p ON l.id_produto = p.id_produto " +
+                            "JOIN secao s ON p.secao = s.id_secao " +
+                            "JOIN cidade c ON l.cidade = c.id_cidade " +
+                            "JOIN estado e ON l.estado = e.id_estado " +
+                            "JOIN pedido pd ON l.numero_pedido = pd.numero_pedido " +
+                            "JOIN usuario u ON pd.id_user = u.id_user"
             );
 
             rs = st.executeQuery();
@@ -161,13 +164,13 @@ public class LoteDaoJDBC implements LoteDao {
     private Lote instantiateLote(ResultSet rs) throws SQLException {
         Secao secao = new Secao();
         secao.setId_secao(rs.getInt("id_secao"));
-        secao.setDescricao(rs.getString("descricao"));
+        secao.setDescricao(rs.getString("nome_secao"));
 
         Produto produto = new Produto(
                 rs.getInt("id_produto"),
-                rs.getString("descriçao"),
+                rs.getString("descricao"),
                 secao,
-                rs.getDate("data_armazenamento")
+                rs.getDate("data_armazenmento")
         );
 
         Cidade cidade = new Cidade(rs.getInt("id_cidade"), rs.getString("cidade"));
@@ -179,8 +182,8 @@ public class LoteDaoJDBC implements LoteDao {
         );
 
         Usuario usuario = new Usuario();
-        usuario.setId(rs.getInt("id_user"));
-        usuario.setSenha(rs.getString("senha"));
+        usuario.setId(rs.getInt("id_usuario"));
+        usuario.setSenha(rs.getString("senha_usuario"));
 
         Pedido pedido = new Pedido(
                 rs.getDate("data_pedido"),
