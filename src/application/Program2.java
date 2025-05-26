@@ -8,9 +8,14 @@ import model.entities.*;
 import java.sql.Connection;
 import java.sql.Date;
 import java.util.List;
+import java.util.Scanner;
+
+import static model.services.Utilidades.calcularDistancia;
 
 public class Program2 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        /*
         Connection conn = DB.getConnection();
 
         testSecaoDao(conn);
@@ -22,28 +27,18 @@ public class Program2 {
         testUsuarioDao(conn);
 
         DB.closeConnection();
+        */
+
+
+        calcularDistancia(sc);
     }
 
     private static void testSecaoDao(Connection conn) {
         System.out.println("===== SecaoDao Tests =====");
         SecaoDao secaoDao = new SecaoDaoJDBC(conn);
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:src/application/Program2.java
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:src/application/Program2.java
+
         Secao secao = new Secao(86478, "Eletrônicos");
-========
-        Secao secao = new Secao(3098678, "Eletrônicos");
->>>>>>>> Stashed changes:src/application/program2.java
-=======
-        Secao secao = new Secao(3098678, "Eletrônicos");
->>>>>>> Stashed changes
-========
-        Secao secao = new Secao(3098678, "Eletrônicos");
->>>>>>>> Stashed changes:src/application/program2.java
-=======
-        Secao secao = new Secao(3098678, "Eletrônicos");
->>>>>>> Stashed changes
+
         secaoDao.insert(secao);
         System.out.println("Inserted: " + secao);
 
@@ -64,23 +59,9 @@ public class Program2 {
         System.out.println("===== ProdutoDao Tests =====");
         Secao secao = new Secao(1, "Eletrônicos Atualizados");
         ProdutoDao produtoDao = new ProdutoDaoJDBC(conn);
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:src/application/Program2.java
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:src/application/Program2.java
+
         Produto produto = new Produto(874654, "Celular", secao, new Date(System.currentTimeMillis()));
-========
-        Produto produto = new Produto(87654, "Celular", secao, new Date(System.currentTimeMillis()));
->>>>>>>> Stashed changes:src/application/program2.java
-=======
-        Produto produto = new Produto(87654, "Celular", secao, new Date(System.currentTimeMillis()));
->>>>>>> Stashed changes
-========
-        Produto produto = new Produto(87654, "Celular", secao, new Date(System.currentTimeMillis()));
->>>>>>>> Stashed changes:src/application/program2.java
-=======
-        Produto produto = new Produto(87654, "Celular", secao, new Date(System.currentTimeMillis()));
->>>>>>> Stashed changes
+
         produtoDao.insert(produto);
         System.out.println("Inserted: " + produto);
 
@@ -104,23 +85,9 @@ public class Program2 {
         System.out.println("===== PedidoDao Tests =====");
         Usuario usuario = new Usuario("12345", 1);
         PedidoDao pedidoDao = new PedidoDaoJDBC(conn);
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:src/application/Program2.java
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:src/application/Program2.java
+
         Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 8457, usuario);
-========
-        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 98457, usuario);
->>>>>>>> Stashed changes:src/application/program2.java
-=======
-        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 98457, usuario);
->>>>>>> Stashed changes
-========
-        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 98457, usuario);
->>>>>>>> Stashed changes:src/application/program2.java
-=======
-        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 98457, usuario);
->>>>>>> Stashed changes
+
         pedidoDao.insert(pedido);
         System.out.println("Inserted: " + pedido);
 
