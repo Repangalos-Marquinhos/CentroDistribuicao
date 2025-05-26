@@ -29,7 +29,15 @@ public class Program2 {
         SecaoDao secaoDao = new SecaoDaoJDBC(conn);
 <<<<<<< Updated upstream
 <<<<<<<< Updated upstream:src/application/Program2.java
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:src/application/Program2.java
         Secao secao = new Secao(86478, "Eletrônicos");
+========
+        Secao secao = new Secao(3098678, "Eletrônicos");
+>>>>>>>> Stashed changes:src/application/program2.java
+=======
+        Secao secao = new Secao(3098678, "Eletrônicos");
+>>>>>>> Stashed changes
 ========
         Secao secao = new Secao(3098678, "Eletrônicos");
 >>>>>>>> Stashed changes:src/application/program2.java
@@ -58,7 +66,15 @@ public class Program2 {
         ProdutoDao produtoDao = new ProdutoDaoJDBC(conn);
 <<<<<<< Updated upstream
 <<<<<<<< Updated upstream:src/application/Program2.java
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:src/application/Program2.java
         Produto produto = new Produto(874654, "Celular", secao, new Date(System.currentTimeMillis()));
+========
+        Produto produto = new Produto(87654, "Celular", secao, new Date(System.currentTimeMillis()));
+>>>>>>>> Stashed changes:src/application/program2.java
+=======
+        Produto produto = new Produto(87654, "Celular", secao, new Date(System.currentTimeMillis()));
+>>>>>>> Stashed changes
 ========
         Produto produto = new Produto(87654, "Celular", secao, new Date(System.currentTimeMillis()));
 >>>>>>>> Stashed changes:src/application/program2.java
@@ -90,7 +106,15 @@ public class Program2 {
         PedidoDao pedidoDao = new PedidoDaoJDBC(conn);
 <<<<<<< Updated upstream
 <<<<<<<< Updated upstream:src/application/Program2.java
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:src/application/Program2.java
         Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 8457, usuario);
+========
+        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 98457, usuario);
+>>>>>>>> Stashed changes:src/application/program2.java
+=======
+        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 98457, usuario);
+>>>>>>> Stashed changes
 ========
         Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 98457, usuario);
 >>>>>>>> Stashed changes:src/application/program2.java
