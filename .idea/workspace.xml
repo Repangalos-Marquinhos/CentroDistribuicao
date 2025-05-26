@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a72bcf-513b-4c6f-a988-6dbe6973449d" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/EstadoDaoJDBC.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/LoteDaoJDBC.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/PedidoDaoJDBC.class" afterDir="false" />
@@ -13,16 +14,25 @@
       <change afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Estado.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Produto.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Secao.class" afterDir="false" />
+=======
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/program2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/program2.class" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/View.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/dao/impl/EstadoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/EstadoDaoJDBC.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Estado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Estado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Produto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Secao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Secao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/src/model/dao/impl/LoteDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/LoteDaoJDBC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/dao/impl/PedidoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/PedidoDaoJDBC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" afterDir="false" />
@@ -58,11 +68,14 @@
     &quot;accountId&quot;: &quot;bea7c81b-3892-4697-be9e-363ecaa902f3&quot;
   }
 }</component>
+<<<<<<< Updated upstream
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/tmp_1_Estado.class" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/tmp_2_Estado.class" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/tmp__Estado.class" root0="FORCE_HIGHLIGHTING" />
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -74,6 +87,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Program.executor&quot;: &quot;Run&quot;,
@@ -95,13 +109,36 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Program.executor": "Run",
+    "Application.Program2.executor": "Run",
+    "Application.Usuario.executor": "Run",
+    "Application.program2.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> Stashed changes
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="db.impl" />
