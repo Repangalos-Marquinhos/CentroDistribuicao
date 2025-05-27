@@ -83,7 +83,7 @@ public class ProdutoDaoJDBC implements ProdutoDao {
 
             if (rs.next()) {
                 Secao secao = new Secao(rs.getInt("id_secao"), rs.getString("nome_secao"));
-                return new Produto(rs.getInt("id_produto"), rs.getString("descricao"), secao, rs.getDate("data_armazenamento"));
+                return new Produto(rs.getInt("id_produto"), rs.getString("descricao"), secao, rs.getDate("data_armazenmento"));
             }
             return null;
         } catch (SQLException e) {

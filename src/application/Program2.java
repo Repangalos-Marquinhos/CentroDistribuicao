@@ -15,7 +15,7 @@ import static model.services.Utilidades.calcularDistancia;
 public class Program2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        /*
+/*
         Connection conn = DB.getConnection();
 
         testSecaoDao(conn);
@@ -27,8 +27,8 @@ public class Program2 {
         testUsuarioDao(conn);
 
         DB.closeConnection();
-        */
 
+*/
 
         calcularDistancia(sc);
     }
@@ -37,7 +37,7 @@ public class Program2 {
         System.out.println("===== SecaoDao Tests =====");
         SecaoDao secaoDao = new SecaoDaoJDBC(conn);
 
-        Secao secao = new Secao(86478, "Eletrônicos");
+        Secao secao = new Secao(3233546, "Eletrônicos");
 
         secaoDao.insert(secao);
         System.out.println("Inserted: " + secao);
@@ -60,7 +60,7 @@ public class Program2 {
         Secao secao = new Secao(1, "Eletrônicos Atualizados");
         ProdutoDao produtoDao = new ProdutoDaoJDBC(conn);
 
-        Produto produto = new Produto(874654, "Celular", secao, new Date(System.currentTimeMillis()));
+        Produto produto = new Produto(123454, "Celular", secao, new Date(System.currentTimeMillis()));
 
         produtoDao.insert(produto);
         System.out.println("Inserted: " + produto);
@@ -86,7 +86,7 @@ public class Program2 {
         Usuario usuario = new Usuario("12345", 1);
         PedidoDao pedidoDao = new PedidoDaoJDBC(conn);
 
-        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 8457, usuario);
+        Pedido pedido = new Pedido(new Date(System.currentTimeMillis()), 66767, new Usuario("12345", 54));
 
         pedidoDao.insert(pedido);
         System.out.println("Inserted: " + pedido);

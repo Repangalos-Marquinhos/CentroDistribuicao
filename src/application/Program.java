@@ -1,4 +1,12 @@
-/*package application;
+package application;
+
+import db.DB;
+import model.dao.impl.DaoFactory;
+import model.dao.PedidoDao;
+import model.dao.ProdutoDao;
+import model.dao.UsuarioDao;
+import model.entities.Usuario;
+import model.services.Utilidades;
 
 import java.util.Scanner;
 
@@ -7,39 +15,38 @@ public class Program {
 
         Scanner sc = new Scanner(System.in);
 
-        int opcao = 0;
-        String controle = "";
+        UsuarioDao usuarioDao = DaoFactory.createUsuarioDao();
+        ProdutoDao produtoDao = DaoFactory.createProdutoDao();
+        PedidoDao pedidoDao = DaoFactory.createPedidoDao();
 
-        //Login do usuário
+        Usuario usuarioLogado = null;
+
+        // Login do usuário
         while (true) {
-
             System.out.println("----------- Login -----------");
             System.out.print("Digite seu usuário: ");
-            String usuario_input = sc.nextLine();
+            int usuario_input = sc.nextInt();
 
-            System.out.println("Digite sua senha: ");
+            System.out.print("Digite sua senha: ");
             String senha_input = sc.nextLine();
 
-            if (usuario_input.equals(adm.getUsuario()) && senha_input.equals(adm.getSenha())) {
+            usuarioLogado = usuarioDao.findById(usuario_input);
+
+            if (usuarioLogado != null) {
                 System.out.println("Login realizado com sucesso!\n");
-                controle = "admin";
-                break;
-            } else if (usuario_input.equals(user.getUsuario()) && senha_input.equals(user.getSenha())) {
-                System.out.println("Login realizado com sucesso!\n");
-                controle = "user";
                 break;
             } else {
                 System.out.println("Usuário ou senha inválidos. Tente novamente.\n");
             }
-
         }
+
+        boolean isAdmin = true;
+
+        int opcao;
         do {
-
-            // Controle para exibir o menu correto
-
-            if (controle.equals("admin")) {
+            if (isAdmin) {
                 Utilidades.exibirMenuADM();
-            } else if (controle.equals("user")) {
+            } else {
                 Utilidades.exibirMenuUSER();
             }
 
@@ -47,29 +54,32 @@ public class Program {
             sc.nextLine();
 
             switch (opcao) {
+                case 0:
+                    if (isAdmin) Utilidades.cadastrarUsuario(sc);
+                    break;
                 case 1:
-                    Utilidades.cadastrarProduto(sc, listaItens);
+                    Utilidades.cadastrarProduto(sc);
                     break;
                 case 2:
-                    Utilidades.retirarProduto(sc, listaItens);
+                    Utilidades.retirarProduto(sc);
                     break;
                 case 3:
-                    Utilidades.listarProdutos(listaItens);
+                    Utilidades.listarProdutos();
                     break;
                 case 4:
-                    Utilidades.criarPedido(sc, listaItens, listaPedidos);
+                    Utilidades.criarPedido(sc);
                     break;
                 case 5:
-                    Utilidades.listarPedidos(listaItens, listaPedidos);
+                    Utilidades.listarPedidos();
                     break;
                 case 6:
                     Utilidades.calcularDistancia(sc);
                     break;
                 case 7:
-                    // Utilidades.volumeGalpao(sc);
+                    Utilidades.volumeGalpao(sc); // Se implementado no futuro
                     break;
                 case 8:
-                    Utilidades.atualizarStatus(sc, listaPedidos);
+
                     break;
                 case 9:
                     System.out.println("Saindo\n");
@@ -80,9 +90,8 @@ public class Program {
             }
 
         } while (opcao != 9);
+
         sc.close();
+        DB.closeConnection();
     }
 }
-*/
-
-

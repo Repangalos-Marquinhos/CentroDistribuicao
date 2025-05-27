@@ -3,10 +3,12 @@ package model.services;
 import db.DB;
 import model.dao.PedidoDao;
 import model.dao.ProdutoDao;
+import model.dao.UsuarioDao;
 import model.dao.impl.DaoFactory;
 import model.entities.Pedido;
 import model.entities.Produto;
 import model.entities.Secao;
+import model.entities.Usuario;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -19,6 +21,7 @@ public class Utilidades {
     private static final Connection conn = DB.getConnection();
     private static final ProdutoDao produtoDao = DaoFactory.createProdutoDao();
     private static final PedidoDao pedidoDao = DaoFactory.createPedidoDao();
+    private static final UsuarioDao usuarioDao = DaoFactory.createUsuarioDao();
 
     public static void exibirMenuADM() {
         System.out.println("+---------------------------------+");
@@ -52,11 +55,36 @@ public class Utilidades {
         System.out.println("+---------------------------------+");
     }
 
+    public static void cadastrarUsuario(Scanner sc) {
+        try {
+            System.out.println("-----------Cadastrar Usuário-----------");
+
+            //sc.nextLine(); // Limpeza do buffer
+
+            System.out.print("ID: ");
+            int id = sc.nextInt();
+            sc.nextLine();
+
+            System.out.print("Senha: ");
+            String senha = sc.nextLine();
+
+            Usuario usuario = new Usuario(senha, id);
+            usuarioDao.insert(usuario);
+
+
+            System.out.println("Usuario cadastrado com sucesso!\n");
+
+        }catch (Exception e){
+            System.out.println("Erro ao cadastrar usuário: " + e.getMessage());
+        }
+
+    }
+
     public static void cadastrarProduto(Scanner sc) {
         try {
             System.out.println("-----------Cadastrar Produto-----------");
 
-            sc.nextLine(); // Limpeza do buffer
+            //sc.nextLine(); // Limpeza do buffer
 
             System.out.print("Descrição: ");
             String descricao = sc.nextLine();
@@ -70,7 +98,7 @@ public class Utilidades {
             Date data = Date.valueOf(dataStr);
 
             Secao secao = new Secao(idSecao, null); // Só o ID é necessário para inserção
-            Produto produto = new Produto(null, descricao, secao, data);
+            Produto produto = new Produto(456789, descricao, secao, data);
 
             produtoDao.insert(produto);
             System.out.println("Produto cadastrado com sucesso!\n");
@@ -110,14 +138,15 @@ public class Utilidades {
         try {
             System.out.println("----------- Criar Pedido -----------");
 
-            System.out.print("Endereço de entrega: ");
-            sc.nextLine();
-            String endereco = sc.nextLine();
+            System.out.print("Id do usuario: ");
+            //sc.nextLine();
+            String id_user = sc.nextLine();
 
             System.out.print("Data de entrega (yyyy-mm-dd): ");
-            String dataEntrega = sc.nextLine();
+            String dataStr = sc.nextLine();
+            Date dataEntrega = Date.valueOf(dataStr);
 
-            Pedido pedido = new Pedido(null, endereco, dataEntrega);
+            Pedido pedido = new Pedido(dataEntrega,2223 , new Usuario("12345", 54));
             pedidoDao.insert(pedido);
             System.out.println("Pedido criado com sucesso!\n");
 
@@ -135,43 +164,17 @@ public class Utilidades {
         } else {
             for (Pedido p : pedidos) {
                 System.out.println("--------------------------------------------------");
-                System.out.println("ID do Pedido: " + p.getId_pedido());
-                System.out.println("Endereço: " + p.getEndereco_entrega());
-                System.out.println("Data de Entrega: " + p.getData_entrega());
-                System.out.println("Status: " + p.getStatus());
+                System.out.println("ID do Pedido: " + p.getId());
+                System.out.println("Id usuario: " + p.getId_usuario());
+                System.out.println("Data de Entrega: " + p.getData_pedido());
                 System.out.println("--------------------------------------------------");
             }
         }
     }
 
-    public static void atualizarStatus(Scanner sc) {
-        System.out.print("Digite o ID do pedido: ");
-        int idPedido = sc.nextInt();
-        sc.nextLine();
-
-        Pedido pedido = pedidoDao.findById(idPedido);
-        if (pedido == null) {
-            System.out.println("Pedido não encontrado.");
-            return;
-        }
-
-        System.out.println("Status atual: " + pedido.getStatus());
-        System.out.print("Novo status (PENDENTE, EM_ANDAMENTO, ENTREGUE): ");
-        String statusStr = sc.nextLine().toUpperCase();
-
-        try {
-            Pedido.Status novoStatus = Pedido.Status.valueOf(statusStr);
-            pedido.setStatus(novoStatus);
-            pedidoDao.update(pedido);
-            System.out.println("Status atualizado com sucesso!");
-        } catch (IllegalArgumentException e) {
-            System.out.println("Status inválido.");
-        }
-    }
-
     public static void calcularDistancia(Scanner sc) {
         System.out.print("Digite o endereço de destino: ");
-        sc.nextLine(); // limpar buffer
+        //sc.nextLine(); // limpar buffer
         String destino = sc.nextLine();
         String resultado = GoogleMapsService.calcularDistancia(destino);
         System.out.println("\n-------- Resultado da Distância ------------------");
