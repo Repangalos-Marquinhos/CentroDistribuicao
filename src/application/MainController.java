@@ -1,4 +1,4 @@
-/*package application;
+package application;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -9,4 +9,3 @@ public class MainController {
 
     // Você pode adicionar métodos para responder eventos do FXML aqui
 }
-*/

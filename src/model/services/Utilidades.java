@@ -138,15 +138,19 @@ public class Utilidades {
         try {
             System.out.println("----------- Criar Pedido -----------");
 
-            System.out.print("Id do usuario: ");
+            System.out.print("Id do pedido: ");
             //sc.nextLine();
+            int id_pedido = sc.nextInt();
+
+            System.out.print("Id do usuario: ");
+            sc.nextLine();
             String id_user = sc.nextLine();
 
             System.out.print("Data de entrega (yyyy-mm-dd): ");
             String dataStr = sc.nextLine();
             Date dataEntrega = Date.valueOf(dataStr);
 
-            Pedido pedido = new Pedido(dataEntrega,2223 , new Usuario("12345", 54));
+            Pedido pedido = new Pedido(dataEntrega, id_pedido , new Usuario("12345", 54));
             pedidoDao.insert(pedido);
             System.out.println("Pedido criado com sucesso!\n");
 
