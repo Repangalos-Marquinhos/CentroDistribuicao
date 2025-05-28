@@ -1,14 +1,27 @@
-/*package model.services;
+package model.services;
 
-import java.util.ArrayList;
+import db.DB;
+import model.dao.PedidoDao;
+import model.dao.ProdutoDao;
+import model.dao.UsuarioDao;
+import model.dao.impl.DaoFactory;
+import model.entities.Pedido;
+import model.entities.Produto;
+import model.entities.Secao;
+import model.entities.Usuario;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-import model.entities.Produto;
-import model.entities.Pedido;
-//import services.GoogleMapsService;
-
 public class Utilidades {
+
+    private static final Connection conn = DB.getConnection();
+    private static final ProdutoDao produtoDao = DaoFactory.createProdutoDao();
+    private static final PedidoDao pedidoDao = DaoFactory.createPedidoDao();
+    private static final UsuarioDao usuarioDao = DaoFactory.createUsuarioDao();
 
     public static void exibirMenuADM() {
         System.out.println("+---------------------------------+");
@@ -20,10 +33,10 @@ public class Utilidades {
         System.out.println("| 3- Listar Produtos              |");
         System.out.println("| 4- Criar Pedido                 |");
         System.out.println("| 5- Listar Pedidos               |");
-        System.out.println("| 6- Calcular Distância           |");
-        System.out.println("| 7- Volume Galpao                |");
-        System.out.println("| 8- Atualizar Status             |");
-        System.out.println("| 9- Sair                         |");
+        System.out.println("| 6- Calcular Distância          |");
+        System.out.println("| 7- Volume Galpao               |");
+        System.out.println("| 8- Atualizar Status            |");
+        System.out.println("| 9- Sair                        |");
         System.out.println("+---------------------------------+");
     }
 
@@ -36,175 +49,149 @@ public class Utilidades {
         System.out.println("| 3- Listar Produtos              |");
         System.out.println("| 4- Criar Pedido                 |");
         System.out.println("| 5- Listar Pedidos               |");
-        System.out.println("| 6- Calcular Distância           |");
-        System.out.println("| 7- Volume Galpao                |");
-        System.out.println("| 8- Sair                         |");
+        System.out.println("| 6- Calcular Distância          |");
+        System.out.println("| 7- Volume Galpao               |");
+        System.out.println("| 8- Sair                        |");
         System.out.println("+---------------------------------+");
     }
 
-    public static void cadastrarProduto(Scanner sc, List<Produto> listaItens) {
-        System.out.println("-----------Cadastrar Produto-----------");
+    public static void cadastrarUsuario(Scanner sc) {
+        try {
+            System.out.println("-----------Cadastrar Usuário-----------");
 
-        System.out.print("Digite o id do produto: ");
+            //sc.nextLine(); // Limpeza do buffer
+
+            System.out.print("ID: ");
+            int id = sc.nextInt();
+            sc.nextLine();
+
+            System.out.print("Senha: ");
+            String senha = sc.nextLine();
+
+            Usuario usuario = new Usuario(senha, id);
+            usuarioDao.insert(usuario);
+
+
+            System.out.println("Usuario cadastrado com sucesso!\n");
+
+        }catch (Exception e){
+            System.out.println("Erro ao cadastrar usuário: " + e.getMessage());
+        }
+
+    }
+
+    public static void cadastrarProduto(Scanner sc) {
+        try {
+            System.out.println("-----------Cadastrar Produto-----------");
+
+            //sc.nextLine(); // Limpeza do buffer
+
+            System.out.print("Descrição: ");
+            String descricao = sc.nextLine();
+
+            System.out.print("ID da Seção: ");
+            int idSecao = sc.nextInt();
+            sc.nextLine();
+
+            System.out.print("Data de armazenamento (yyyy-mm-dd): ");
+            String dataStr = sc.nextLine();
+            Date data = Date.valueOf(dataStr);
+
+            Secao secao = new Secao(idSecao, null); // Só o ID é necessário para inserção
+            Produto produto = new Produto(456789, descricao, secao, data);
+
+            produtoDao.insert(produto);
+            System.out.println("Produto cadastrado com sucesso!\n");
+
+        } catch (Exception e) {
+            System.out.println("Erro ao cadastrar produto: " + e.getMessage());
+        }
+    }
+
+    public static void retirarProduto(Scanner sc) {
+        System.out.print("Digite o ID do produto que deseja retirar: ");
         int id = sc.nextInt();
 
-        System.out.print("Digite o lote do produto: ");
-        int lote = sc.nextInt();
-
-        System.out.print("Digite a quantidade do produto: ");
-        int quantidade = sc.nextInt();
-
-        System.out.print("Digite o tamanho do produto: ");
-        String tamanho = sc.nextLine();
-
-        sc.nextLine();
-
-        System.out.print("Digite a descrição do produto: ");
-        String descricao = sc.nextLine();
-
-        System.out.print("Digite a categoria do produto: ");
-        String categoria = sc.nextLine();
-
-        System.out.print("Digite o prazo do produto: ");
-        String prazo = sc.nextLine();
-
-        Produto produto = new Produto(id, lote, quantidade, tamanho, descricao, categoria, prazo);
-        listaItens.add(produto);
-
-        System.out.println("Produto cadastrado com sucesso!\n");
+        Produto produto = produtoDao.findById(id);
+        if (produto == null) {
+            System.out.println("Produto não encontrado.\n");
+        } else {
+            produtoDao.deleteById(id);
+            System.out.println("Produto removido com sucesso!\n");
+        }
     }
 
-    public static void retirarProduto(Scanner sc, List<Produto> listaItens) {
-        System.out.print("Digite o ID do produto que deseja retirar: ");
-        int idRemover = sc.nextInt();
-
-        boolean removido = listaItens.removeIf(produtoAtual -> produtoAtual.getId() == idRemover);
-
-        System.out.println(removido ? "Produto removido com sucesso!\n" : "Produto não encontrado.\n");
-    }
-
-    public static void listarProdutos(List<Produto> listaItens) {
-        System.out.println("Listar Produtos:");
-
-        if (listaItens.isEmpty()) {
+    public static void listarProdutos() {
+        List<Produto> produtos = produtoDao.findAll();
+        if (produtos.isEmpty()) {
             System.out.println("Nenhum produto cadastrado.\n");
         } else {
-            for (Produto i : listaItens) {
+            for (Produto p : produtos) {
                 System.out.println("--------------------------------------------------");
-                System.out.println(i);
+                System.out.println(p);
                 System.out.println("--------------------------------------------------");
             }
         }
     }
 
-    public static void criarPedido(Scanner sc, List<Produto> listaItens, List<Pedido> listaPedidos) {
+    public static void criarPedido(Scanner sc) {
+        try {
+            System.out.println("----------- Criar Pedido -----------");
 
-        System.out.println("----------- Criar Pedido -----------");
+            System.out.print("Id do usuario: ");
+            //sc.nextLine();
+            String id_user = sc.nextLine();
 
-        System.out.print("Digite o ID do pedido: ");
-        int idPedido = sc.nextInt();
-        sc.nextLine();
+            System.out.print("Data de entrega (yyyy-mm-dd): ");
+            String dataStr = sc.nextLine();
+            Date dataEntrega = Date.valueOf(dataStr);
 
-        System.out.print("Digite o endereço de entrega: ");
-        String endereco = sc.nextLine();
+            Pedido pedido = new Pedido(dataEntrega,2223 , new Usuario("12345", 54));
+            pedidoDao.insert(pedido);
+            System.out.println("Pedido criado com sucesso!\n");
 
-        System.out.print("Digite a data de entrega: ");
-        String deadline = sc.nextLine();
-
-        System.out.println("Digite os IDs dos produtos do pedido (separados por espaço): ");
-        String[] idsProdutos = sc.nextLine().split(" ");
-
-        List<Integer> itensPedido = new ArrayList<>();
-        for (String idStr : idsProdutos) {
-            itensPedido.add(Integer.parseInt(idStr));
+        } catch (InputMismatchException e) {
+            System.out.println("Entrada inválida. Verifique os dados e tente novamente.\n");
+        } catch (Exception e) {
+            System.out.println("Erro ao criar pedido: " + e.getMessage());
         }
-
-        Pedido pedido = new Pedido(idPedido, endereco, deadline, itensPedido);
-        listaPedidos.add(pedido);
-
-        System.out.println("Pedido criado com sucesso!\n");
     }
 
-    public static void listarPedidos(List<Produto> listaItens, List<Pedido> listaPedidos) {
-        System.out.println("Listar Pedidos:");
-        System.out.println("--------------------------------------------------");
-
-        if (listaPedidos.isEmpty()) {
-            System.out.println("Nenhum pedido cadastrado.\n");
+    public static void listarPedidos() {
+        List<Pedido> pedidos = pedidoDao.findAll();
+        if (pedidos.isEmpty()) {
+            System.out.println("Nenhum pedido encontrado.\n");
         } else {
-            for (Pedido p : listaPedidos) {
+            for (Pedido p : pedidos) {
+                System.out.println("--------------------------------------------------");
                 System.out.println("ID do Pedido: " + p.getId());
-                System.out.println("Endereço: " + p.getEndereco());
-                System.out.println("Data de entrega: " + p.getDeadline());
-                System.out.println("Itens do Pedido:");
-
-                for (int idProduto : p.getItens()) {
-                    Produto produto = listaItens.stream()
-                            .filter(i -> i.getId() == idProduto)
-                            .findFirst()
-                            .orElse(null);
-
-                    if (produto != null) {
-                        System.out.println("  - " + produto);
-                    } else {
-                        System.out.println("  - Produto com ID " + idProduto + " não encontrado.");
-                    }
-                }
+                System.out.println("Id usuario: " + p.getId_usuario());
+                System.out.println("Data de Entrega: " + p.getData_pedido());
                 System.out.println("--------------------------------------------------");
-                System.out.println();
             }
-        }
-    }
-
-    public static void atualizarStatus(Scanner sc, List<Pedido> listaPedidos) {
-        System.out.print("Digite o ID do pedido que deseja atualizar: ");
-        int idPedido = sc.nextInt();
-        sc.nextLine();
-
-        Pedido pedido = listaPedidos.stream()
-                .filter(p -> p.getId() == idPedido)
-                .findFirst()
-                .orElse(null);
-
-        if (pedido != null) {
-            System.out.println("Status atual do pedido: " + pedido.getStatus());
-            System.out.print("Digite o novo status (PENDENTE, EM_ANDAMENTO, ENTREGUE): ");
-            String novoStatusStr = sc.nextLine().toUpperCase();
-
-            try {
-                Pedido.Status novoStatus = Pedido.Status.valueOf(novoStatusStr);
-                pedido.setStatus(novoStatus);
-                System.out.println("Status atualizado com sucesso!\n");
-            } catch (IllegalArgumentException e) {
-                System.out.println("Status inválido. Tente novamente.\n");
-            }
-        } else {
-            System.out.println("Pedido não encontrado.\n");
         }
     }
 
     public static void calcularDistancia(Scanner sc) {
         System.out.print("Digite o endereço de destino: ");
+        //sc.nextLine(); // limpar buffer
         String destino = sc.nextLine();
-
         String resultado = GoogleMapsService.calcularDistancia(destino);
-
         System.out.println("\n-------- Resultado da Distância ------------------");
         System.out.println("|   " + resultado + "   |");
         System.out.println("--------------------------------------------------\n");
     }
 
-    /*public static void volumeGalpao(Scanner sc) {
+    public static void volumeGalpao(Scanner sc) {
         System.out.print("Digite a largura do galpão: ");
-        int x = sc.nextInt();
-
+        int largura = sc.nextInt();
         System.out.print("Digite o comprimento do galpão: ");
-        int y = sc.nextInt();
-
+        int comprimento = sc.nextInt();
         System.out.print("Digite a altura do galpão: ");
-        int z = sc.nextInt();
+        int altura = sc.nextInt();
 
+        int volume = largura * comprimento * altura;
+
+        System.out.println("O volume do galpão é: " + volume + " m³");
+    }
 }
-
-*/
-

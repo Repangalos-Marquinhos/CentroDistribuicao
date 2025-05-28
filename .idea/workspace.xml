@@ -5,8 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a72bcf-513b-4c6f-a988-6dbe6973449d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/program2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DbException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DbIntegrityException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/CidadeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/EstadoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/LoteDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/PedidoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/ProdutoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/SecaoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/UsuarioDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/CidadeDaoJDBC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/DaoFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/UsuarioDaoJDBC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Cidade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Estado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Lote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Pedido.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Produto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Secao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/GoogleMapsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
     </list>
     <list id="0d8530e9-6ee9-4aa1-bbcb-ea93c8ba0c09" name="Changes by OJUNIOR1970" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,38 +80,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Executar JavaFX.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Program.executor": "Run",
-    "Application.Usuario.executor": "Run",
-    "Application.program2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Executar JavaFX.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Program.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Usuario.executor&quot;: &quot;Run&quot;,
+    &quot;Application.program2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AtomSelectConfig&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JavaFX"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JavaFX&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="db.impl" />
@@ -153,9 +185,7 @@
       <workItem from="1747507374013" duration="15506000" />
       <workItem from="1748112005014" duration="2135000" />
       <workItem from="1748114162594" duration="1250000" />
-      <workItem from="1748115604228" duration="8630000" />
-      <workItem from="1748218603301" duration="12000" />
-      <workItem from="1748218745111" duration="1656000" />
+      <workItem from="1748115604228" duration="8395000" />
     </task>
     <servers />
   </component>

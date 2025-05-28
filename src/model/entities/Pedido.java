@@ -11,7 +11,7 @@ public class Pedido {
 
     private int id;
     private Date data_pedido;
-    private Usuario id_usuario;
+    private  Usuario id_usuario;//new Usuario("12345", 54)
 
     public Pedido(Date data_pedido, int id, Usuario id_usuario) {
         this.data_pedido = data_pedido;
@@ -38,6 +38,7 @@ public class Pedido {
     public Usuario getId_usuario() {
         return id_usuario;
     }
+
 
     public void setId_usuario(Usuario id_usuario) {
         this.id_usuario = id_usuario;

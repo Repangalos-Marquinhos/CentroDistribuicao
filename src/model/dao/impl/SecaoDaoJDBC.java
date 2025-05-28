@@ -22,9 +22,11 @@ public class SecaoDaoJDBC implements SecaoDao {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement(
-                    "INSERT INTO secao (descricao) VALUES (?)"
+                    "INSERT INTO secao (id_secao, descricao) VALUES (?,?)"
             );
-            st.setString(1, secao.getDescricao());
+            st.setInt(1, secao.getId_secao());
+            st.setString(2, secao.getDescricao());
+
             st.executeUpdate();
         } catch (SQLException e) {
             throw new DbException("Erro ao inserir seção: " + e.getMessage());
