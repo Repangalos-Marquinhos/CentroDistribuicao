@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="" />
+    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/CadastrarPedido.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/CadastrarProd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AdminView.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,6 +124,7 @@
       <workItem from="1748480276487" duration="1337000" />
       <workItem from="1748481854899" duration="4368000" />
       <workItem from="1748487990559" duration="167000" />
+      <workItem from="1748488207335" duration="1075000" />
     </task>
     <servers />
   </component>
