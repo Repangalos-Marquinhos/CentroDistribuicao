@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/gui/CadastrarProdutoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/CadastrarProdutoView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/LoginView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/ProdutoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/ProdutosView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/View.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/ViewController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/View.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entities/Secao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Secao.java" afterDir="false" />
-    </list>
+    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
