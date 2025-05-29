@@ -14,9 +14,9 @@ import static model.services.Utilidades.calcularDistancia;
 
 public class Program2 {
     public static void main(String[] args) {
+        Connection conn = DB.getConnection();
         Scanner sc = new Scanner(System.in);
 /*
-        Connection conn = DB.getConnection();
 
         testSecaoDao(conn);
         testProdutoDao(conn);
@@ -29,8 +29,8 @@ public class Program2 {
         DB.closeConnection();
 
 */
-
-        calcularDistancia(sc);
+        testProdutoDao(conn);
+        //calcularDistancia(sc);
     }
 
     private static void testSecaoDao(Connection conn) {

@@ -31,6 +31,11 @@ public class Secao {
     }
 
     @Override
+    public String toString() {
+        return descricao;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Secao secao = (Secao) o;

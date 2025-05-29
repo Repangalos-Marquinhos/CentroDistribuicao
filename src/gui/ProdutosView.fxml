@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProdutoController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <center>
+        <TableView fx:id="tabelaProdutos" prefHeight="400" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="id_produto" prefWidth="101.60000610351562" resizable="false" text="ID" />
+                <TableColumn fx:id="descricao" prefWidth="196.00003051757812" resizable="false" text="Descrição" />
+                <TableColumn fx:id="secao" prefWidth="241.5999755859375" resizable="false" text="Seção" />
+                <TableColumn fx:id="data_armazenamento" prefWidth="222.4000244140625" resizable="false" text="Data de Armazenamento" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
