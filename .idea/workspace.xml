@@ -4,130 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2a72bcf-513b-4c6f-a988-6dbe6973449d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/View.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/ViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/program2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DbException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DbIntegrityException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/CidadeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/EstadoDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/LoteDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/PedidoDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/ProdutoDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/SecaoDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/UsuarioDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/CidadeDaoJDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/DaoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/UsuarioDaoJDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Cidade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Estado.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Lote.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Pedido.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Produto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Secao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/GoogleMapsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/DaoFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/ProdutoDaoJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/ProdutoDaoJDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Pedido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entities/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/services/Utilidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/services/Utilidades.java" afterDir="false" />
     </list>
-    <list id="0d8530e9-6ee9-4aa1-bbcb-ea93c8ba0c09" name="Changes by OJUNIOR1970" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Fidelis09&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Repangalos-Marquinhos/CentroDistribuicao.git&quot;,
-    &quot;accountId&quot;: &quot;6519951e-b324-4225-9f5f-ee70e18920c4&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="2xEWs1UuE3ZoSfwN8H236MD19Fb" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Executar JavaFX.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Program.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Usuario.executor&quot;: &quot;Run&quot;,
-    &quot;Application.program2.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AtomSelectConfig&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JavaFX&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Program.executor": "Run",
+    "Application.Program2.executor": "Run",
+    "git-widget-placeholder": "main",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="db.impl" />
-      <recent name="db" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Executar JavaFX">
-    <configuration name="Executar JavaFX" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="application.Program2" />
-      <module name="CentroDistribuicao" />
-      <option name="PROGRAM_PARAMETERS" value="$Classpath$" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\java-libs\javafx-sdk-23.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="Application.Program">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.Program" />
       <module name="CentroDistribuicao" />
@@ -141,8 +45,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="program2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.program2" />
+    <configuration name="Program2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Program2" />
       <module name="CentroDistribuicao" />
       <extension name="coverage">
         <pattern>
@@ -154,46 +58,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Executar JavaFX" />
-      <item itemvalue="Application.Program" />
-      <item itemvalue="Application.program2" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.program2" />
         <item itemvalue="Application.Program" />
+        <item itemvalue="Application.Program2" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="b2a72bcf-513b-4c6f-a988-6dbe6973449d" name="Changes" comment="" />
-      <created>1747503915449</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1747503915449</updated>
-      <workItem from="1747503916711" duration="3429000" />
-      <workItem from="1747507374013" duration="15506000" />
-      <workItem from="1748112005014" duration="2135000" />
-      <workItem from="1748114162594" duration="1250000" />
-      <workItem from="1748115604228" duration="8395000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

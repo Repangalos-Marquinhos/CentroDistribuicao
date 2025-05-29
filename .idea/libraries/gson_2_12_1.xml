@@ -4,6 +4,9 @@
       <root url="jar://$PROJECT_DIR$/../../Downloads/gson-2.12.1.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../../../../java-libs/javafx-sdk-23.0.2" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../../java-libs/javafx-sdk-23.0.2" recursive="false" type="SOURCES" />
   </library>
 </component>
