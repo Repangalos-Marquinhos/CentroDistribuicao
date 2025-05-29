@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/gui/CadastrarPedido.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/CadastrarProd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/LoginView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,6 +119,7 @@
       <updated>1748480273436</updated>
       <workItem from="1748480276487" duration="1337000" />
       <workItem from="1748481854899" duration="4368000" />
+      <workItem from="1748487990559" duration="167000" />
     </task>
     <servers />
   </component>
