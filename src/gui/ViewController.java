@@ -9,7 +9,7 @@ public class ViewController {
 
     @FXML
     public void onMyButtonAction() {
-        System.out.println("Olá Mundo!");
+        System.out.println("minha pmba");
     }
 
 }

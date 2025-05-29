@@ -5,20 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/application.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/DaoFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/ProdutoDaoJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/ProdutoDaoJDBC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/entities/Pedido.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entities/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/services/Utilidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/services/Utilidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/ViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -28,10 +35,20 @@
     "Application.Program.executor": "Run",
     "Application.Program2.executor": "Run",
     "git-widget-placeholder": "main",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Program">
+  <component name="RunManager" selected="Application.Executar JavaFX">
+    <configuration name="Executar JavaFX" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="application.Main" />
+      <module name="CentroDistribuicao" />
+      <option name="PROGRAM_PARAMETERS" value="$Classpath$" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\java-libs\javafx-sdk-23.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.Program" />
       <module name="CentroDistribuicao" />
@@ -58,6 +75,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Executar JavaFX" />
+      <item itemvalue="Application.Program2" />
+      <item itemvalue="Application.Program" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Program" />
