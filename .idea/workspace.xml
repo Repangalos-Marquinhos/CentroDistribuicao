@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/application.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/ViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,16 +16,47 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "gabrielbbruno"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Repangalos-Marquinhos/CentroDistribuicao.git",
+    "accountId": "6519951e-b324-4225-9f5f-ee70e18920c4"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2xkT8PyA5NZ4e3KYapx251jg8WF" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Executar JavaFX.executor": "Run",
     "Application.Program.executor": "Run",
     "Application.Program2.executor": "Run",
-    "git-widget-placeholder": "main",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "branch__gabriel",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Executar JavaFX">
@@ -87,7 +107,26 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="" />
+      <created>1748480914311</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748480914311</updated>
+      <workItem from="1748480919124" duration="6863000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
