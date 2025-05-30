@@ -19,6 +19,10 @@ public class Pedido {
         this.id_usuario = id_usuario;
     }
 
+    public Pedido() {
+
+    }
+
     public Date getData_pedido() {
         return data_pedido;
     }
@@ -52,6 +56,10 @@ public class Pedido {
                 ", id_usuario=" + id_usuario +
                 '}';
     }
+
+   // public String toString2() {
+   //     return data_pedido;
+  //  }
 
     @Override
     public boolean equals(Object o) {

@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="gui.CadastrarProdutoController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CadastrarProdutoController">
     <children>
-        <Label layoutX="200.0" layoutY="30.0" text="Cadastro de Produto" />
-        <TextField fx:id="txtNome" layoutX="100.0" layoutY="80.0" promptText="roger" />
-        <TextField fx:id="txtPreco" layoutX="100.0" layoutY="120.0" promptText="Preço" />
-        <Button layoutX="100.0" layoutY="160.0" onAction="#onCadastrar" text="Cadastrar" />
+        <Label layoutX="45.0" layoutY="29.0" text="Cadastro de Produto">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+        <TextField fx:id="txtNome" layoutX="45.0" layoutY="94.0" prefHeight="26.0" prefWidth="175.0" promptText="Nome" />
+        <Button layoutX="86.0" layoutY="267.0" onAction="#onCadastrar" text="Cadastrar" />
+        <ComboBox fx:id="comboBox" layoutX="44.0" layoutY="200.0" prefHeight="26.0" prefWidth="175.0" />
+        <DatePicker fx:id="datePicker" layoutX="44.0" layoutY="146.0" promptText="Data" />
     </children>
 </AnchorPane>

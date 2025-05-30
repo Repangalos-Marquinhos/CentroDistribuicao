@@ -13,6 +13,8 @@ public interface ProdutoDao {
 
     Produto findById(int id_produto);
 
+    List<Produto> findByDescricao(String descricao);
+
     List<Produto> findAll();
 
     List<Produto> findBySecaoId(int secaoId); // útil para listar produtos por seção

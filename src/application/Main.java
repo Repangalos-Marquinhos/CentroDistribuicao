@@ -9,7 +9,7 @@ import javafx.scene.Parent;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/gui/ProdutosView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/gui/PedidosView.fxml"));
 
         Scene scene = new Scene(root);
         stage.setTitle("Tela de Login");

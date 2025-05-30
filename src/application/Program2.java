@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 import static model.services.Utilidades.calcularDistancia;
 
+
 public class Program2 {
     public static void main(String[] args) {
         Connection conn = DB.getConnection();
@@ -29,7 +30,12 @@ public class Program2 {
         DB.closeConnection();
 
 */
-        testProdutoDao(conn);
+        ProdutoDao produtoDao = new ProdutoDaoJDBC(conn);
+        List<Produto> produtos = produtoDao.findByDescricao("Celular");
+        produtos.forEach(System.out::println);
+
+
+        //testProdutoDao(conn);
         //calcularDistancia(sc);
     }
 

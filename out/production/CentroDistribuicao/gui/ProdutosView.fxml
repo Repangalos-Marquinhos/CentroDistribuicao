@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProdutoController">
 
-    <padding>
-        <Insets bottom="20" left="20" right="20" top="20" />
-    </padding>
-
-    <center>
-        <TableView fx:id="tabelaProdutos" prefHeight="400" prefWidth="600.0">
-            <columns>
-                <TableColumn fx:id="id_produto" prefWidth="101.60000610351562" resizable="false" text="ID" />
-                <TableColumn fx:id="descricao" prefWidth="196.00003051757812" resizable="false" text="Descrição" />
-                <TableColumn fx:id="secao" prefWidth="241.5999755859375" resizable="false" text="Seção" />
-                <TableColumn fx:id="data_armazenamento" prefWidth="222.4000244140625" resizable="false" text="Data de Armazenamento" />
-            </columns>
-        </TableView>
-    </center>
-</BorderPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProdutoController">
+   <children>
+      <TableView fx:id="tabelaProdutos" layoutX="11.0" layoutY="181.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="299.0" prefWidth="771.0">
+         <columns>
+            <TableColumn fx:id="id_produto" prefWidth="101.60000610351562" resizable="false" text="ID" />
+            <TableColumn fx:id="descricao" prefWidth="196.00003051757812" resizable="false" text="Descrição" />
+            <TableColumn fx:id="secao" prefWidth="241.5999755859375" text="Seção" />
+            <TableColumn fx:id="data_armazenamento" prefWidth="222.4000244140625" resizable="false" text="Data de Armazenamento" />
+         </columns>
+      </TableView>
+      <Button layoutX="730.0" layoutY="14.0" mnemonicParsing="false" text="Excluir" />
+      <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" text="Alterar" />
+      <TextField layoutX="169.0" layoutY="14.0" prefHeight="26.0" prefWidth="168.0" />
+      <Button layoutX="337.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Lupa" />
+      <Label layoutX="11.0" layoutY="52.0" prefHeight="70.0" prefWidth="309.0" text="Pedidos">
+         <font>
+            <Font size="68.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

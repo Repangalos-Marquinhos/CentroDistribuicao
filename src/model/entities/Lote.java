@@ -20,6 +20,13 @@ public class Lote {
         this.pedido = pedido;
     }
 
+    public Lote(Produto produto, String destino, Pedido pedido) {
+        this.produto = produto;
+        this.destino = destino;
+        this.pedido = pedido;
+    }
+
+
     public String getCep() {
         return cep;
     }

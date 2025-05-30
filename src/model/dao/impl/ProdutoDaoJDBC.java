@@ -95,6 +95,30 @@ public class ProdutoDaoJDBC implements ProdutoDao {
     }
 
     @Override
+    public List<Produto> findByDescricao(String descricao) {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        try {
+            st = conn.prepareStatement("SELECT * FROM produtos WHERE LOWER(descricao) LIKE ?");
+            st.setString(1, descricao);
+            rs = st.executeQuery();
+            List<Produto> list = new ArrayList<>();
+            while (rs.next()) {
+                Secao secao = new Secao(rs.getInt("secao"), rs.getString("descricao"));
+                Produto produto = new Produto(rs.getInt("id_produto"), rs.getString("descricao"), secao, rs.getDate("data_armazenmento"));
+                list.add(produto);
+            }
+            return list;
+        } catch (SQLException e) {
+            throw new DbException("Erro ao achar o produto: " + e.getMessage());
+        } finally {
+            DB.closeResultSet(rs);
+            DB.closeStatement(st);
+        }
+    }
+
+
+    @Override
     public List<Produto> findAll() {
         PreparedStatement st = null;
         ResultSet rs = null;
