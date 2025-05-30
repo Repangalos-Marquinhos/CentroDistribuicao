@@ -5,33 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/gui/CadastrarPedidoView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/CadastroUsuario.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/CadastroUsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/PedidosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/PedidosView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Program2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Program2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/CadastrarProdutoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/CadastrarProdutoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/CadastrarProdutoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/CadastrarProdutoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/ProdutosView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/ProdutosView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/ProdutoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/ProdutoDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/ProdutoDaoJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/ProdutoDaoJDBC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/CadastrarProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/CadastrarProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/CadastrarProdutoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/CadastrarProdutoView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ProdutosView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ProdutosView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/ProdutoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/ProdutoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/LoteDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/LoteDaoJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entities/Lote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Lote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entities/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Pedido.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748533053142</updated>
-      <workItem from="1748533057006" duration="24135000" />
+      <workItem from="1748533057006" duration="25639000" />
     </task>
     <servers />
   </component>
