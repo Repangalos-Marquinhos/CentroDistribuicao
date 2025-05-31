@@ -131,7 +131,7 @@ public class LoteDaoJDBC implements LoteDao {
         ResultSet rs = null;
         try {
                     st = conn.prepareStatement(
-                            "SELECT p.id_produto, p.descricao, "
+                            "SELECT ped.numero_pedido, p.descricao, "
                             +"p.data_armazenmento, s.id_secao, "
                             +"s.descricao AS nome_secao, l.destino, "
                             +"ped.data_pedido "
@@ -145,8 +145,7 @@ public class LoteDaoJDBC implements LoteDao {
             List<Lote> list = new ArrayList<>();
             while (rs.next()) {
                 Secao secao = new Secao(rs.getInt("id_secao"), rs.getString("nome_secao"));
-                Produto produto = new Produto(
-                        rs.getInt("id_produto"),
+                Produto produto = new Produto(1,
                         rs.getString("descricao"),
                         secao,
                         rs.getDate("data_armazenmento")

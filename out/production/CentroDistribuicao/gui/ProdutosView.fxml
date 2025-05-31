@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProdutoController">
    <children>
       <TableView fx:id="tabelaProdutos" layoutX="11.0" layoutY="181.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="299.0" prefWidth="771.0">
@@ -23,7 +22,7 @@
       <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" text="Alterar" />
       <TextField layoutX="169.0" layoutY="14.0" prefHeight="26.0" prefWidth="168.0" />
       <Button layoutX="337.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Lupa" />
-      <Label layoutX="11.0" layoutY="52.0" prefHeight="70.0" prefWidth="309.0" text="Pedidos">
+      <Label layoutX="11.0" layoutY="52.0" prefHeight="70.0" prefWidth="309.0" text="Produtos">
          <font>
             <Font size="68.0" />
          </font>
