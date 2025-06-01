@@ -94,17 +94,17 @@ public class LoteDaoJDBC implements LoteDao {
         try {
             st = conn.prepareStatement(
                     "SELECT l.*, p.descricao, p.data_armazenmento, s.id_secao, "
-                    +"s.descricao AS nome_secao, c.id_cidade, c.cidade, e.id_estado, "
-                    +"e.UF AS estado, e.sigla, pd.numero_pedido AS id_pedido, pd.data_pedido, "
-                    +"u.id_user AS id_usuario, u.senha AS senha_usuario "
-                    +"FROM lote l JOIN produtos p ON l.id_produto = p.id_produto "
-                    +"JOIN secao s ON p.secao = s.id_secao "
-                    +"JOIN cidade c ON l.cidade = c.id_cidade "
-                    +"JOIN estado e ON l.estado = e.id_estado "
-                    +"JOIN pedido pd ON l.numero_pedido = pd.numero_pedido "
-                    +"JOIN usuario u ON pd.id_user = u.id_user "
-                    +"WHERE l.id_produto = ?;"
-           );
+                            +"s.descricao AS nome_secao, c.id_cidade, c.cidade, e.id_estado, "
+                            +"e.UF AS estado, e.sigla, pd.numero_pedido AS id_pedido, pd.data_pedido, "
+                            +"u.id_user AS id_usuario, u.senha AS senha_usuario "
+                            +"FROM lote l JOIN produtos p ON l.id_produto = p.id_produto "
+                            +"JOIN secao s ON p.secao = s.id_secao "
+                            +"JOIN cidade c ON l.cidade = c.id_cidade "
+                            +"JOIN estado e ON l.estado = e.id_estado "
+                            +"JOIN pedido pd ON l.numero_pedido = pd.numero_pedido "
+                            +"JOIN usuario u ON pd.id_user = u.id_user "
+                            +"WHERE l.id_produto = ?;"
+            );
 
             st.setInt(1, produtoId);
 
@@ -124,42 +124,52 @@ public class LoteDaoJDBC implements LoteDao {
         }
     }
 
+
     @Override
     public List<Lote> findAll() {
         PreparedStatement st = null;
         ResultSet rs = null;
         try {
             st = conn.prepareStatement(
-                    "SELECT l.*, " +
-                            "p.descricao, p.data_armazenmento, s.id_secao, s.descricao AS nome_secao, " +
-                            "c.id_cidade, c.cidade, " +
-                            "e.id_estado, e.UF AS estado, e.sigla, " +
-                            "pd.numero_pedido AS id_pedido, pd.data_pedido, " +
-                            "u.id_user AS id_usuario, u.senha AS senha_usuario " +
-                            "FROM lote l " +
-                            "JOIN produtos p ON l.id_produto = p.id_produto " +
-                            "JOIN secao s ON p.secao = s.id_secao " +
-                            "JOIN cidade c ON l.cidade = c.id_cidade " +
-                            "JOIN estado e ON l.estado = e.id_estado " +
-                            "JOIN pedido pd ON l.numero_pedido = pd.numero_pedido " +
-                            "JOIN usuario u ON pd.id_user = u.id_user"
+                    "SELECT ped.numero_pedido, p.descricao, "
+                            +"p.data_armazenmento, s.id_secao, "
+                            +"s.descricao AS nome_secao, l.destino, "
+                            +"ped.data_pedido "
+                            +"FROM lote l "
+                            +"JOIN produtos p ON l.id_produto = p.id_produto "
+                            +"JOIN secao s ON p.secao = s.id_secao "
+                            +"JOIN pedido ped ON l.numero_pedido = ped.numero_pedido;"
             );
 
             rs = st.executeQuery();
-
             List<Lote> list = new ArrayList<>();
             while (rs.next()) {
-                list.add(instantiateLote(rs));
+                Secao secao = new Secao(rs.getInt("id_secao"), rs.getString("nome_secao"));
+                Produto produto = new Produto(1,
+                        rs.getString("descricao"),
+                        secao,
+                        rs.getDate("data_armazenmento")
+                );
+
+                Pedido pedido = new Pedido();
+                pedido.setId(rs.getInt("numero_pedido"));
+                pedido.setData_pedido(rs.getDate("data_pedido"));
+
+// ou use o construtor se tiver um
+
+                Lote lote = new Lote(produto, rs.getString("destino"), pedido);
+
+                list.add(lote);
             }
             return list;
-
         } catch (SQLException e) {
-            throw new DbException("Erro ao listar lotes: " + e.getMessage());
+            throw new DbException("Erro ao listar lotes com produto e pedido: " + e.getMessage());
         } finally {
             DB.closeResultSet(rs);
             DB.closeStatement(st);
         }
     }
+
 
     private Lote instantiateLote(ResultSet rs) throws SQLException {
         Secao secao = new Secao();

@@ -5,8 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d4502b6-3ad0-4c2c-bb2f-db6f1ff8bade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d4502b6-3ad0-4c2c-bb2f-db6f1ff8bade.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Program2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Program2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/ProdutoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/ProdutoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/ProdutoDaoJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/ProdutoDaoJDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/controller/CadastroLoteModalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controller/CadastroLoteModalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/controller/CadastroPedidosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controller/CadastroPedidosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/controller/CadastroProdutosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controller/CadastroProdutosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/view/CadastroLoteModal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/view/CadastroLoteModal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/view/CadastroPedidos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/view/CadastroPedidos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/view/CadastroProdutos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/view/CadastroProdutos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/LoteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/LoteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/PedidoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/PedidoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/ProdutoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/ProdutoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/SecaoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/SecaoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/UsuarioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/UsuarioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/CidadeDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/CidadeDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/EstadoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/EstadoDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/LoteDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/LoteDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/PedidoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/PedidoDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/ProdutoDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/SecaoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/SecaoDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/UsuarioDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/UsuarioDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entities/Lote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Lote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entities/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entities/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entities/Secao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Secao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/services/Utilidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/services/Utilidades.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,30 +87,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Executar JavaFX.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Program.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Program2.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;branch__gabriel&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Executar JavaFX.executor": "Run",
+    "Application.Program.executor": "Run",
+    "Application.Program2.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "branch__gabriel",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "azure",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Gabriel\Faculdade\CentroDistribuicao\src\gui\view" />
@@ -120,8 +160,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Program" />
         <item itemvalue="Application.Program2" />
+        <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
   </component>

@@ -17,6 +17,8 @@ public class Produto {
         this.data_armazenamento = data_armazenamento;
     }
 
+    public Produto() {}
+
     public Date getData_armazenamento() {
         return data_armazenamento;
     }

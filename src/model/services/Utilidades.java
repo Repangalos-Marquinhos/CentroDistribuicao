@@ -1,14 +1,13 @@
 package model.services;
 
 import db.DB;
+import model.dao.LoteDao;
 import model.dao.PedidoDao;
 import model.dao.ProdutoDao;
 import model.dao.UsuarioDao;
 import model.dao.impl.DaoFactory;
-import model.entities.Pedido;
-import model.entities.Produto;
-import model.entities.Secao;
-import model.entities.Usuario;
+import model.dao.impl.PedidoDaoJDBC;
+import model.entities.*;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -22,6 +21,8 @@ public class Utilidades {
     private static final ProdutoDao produtoDao = DaoFactory.createProdutoDao();
     private static final PedidoDao pedidoDao = DaoFactory.createPedidoDao();
     private static final UsuarioDao usuarioDao = DaoFactory.createUsuarioDao();
+    private static final LoteDao loteDao = DaoFactory.createLoteDao();
+    private static final Scanner sc = new Scanner(System.in);
 
     public static void exibirMenuADM() {
         System.out.println("+---------------------------------+");
@@ -55,18 +56,8 @@ public class Utilidades {
         System.out.println("+---------------------------------+");
     }
 
-    public static void cadastrarUsuario(Scanner sc) {
+    public static void cadastrarUsuario(String senha, int id) {
         try {
-            System.out.println("-----------Cadastrar Usuário-----------");
-
-            //sc.nextLine(); // Limpeza do buffer
-
-            System.out.print("ID: ");
-            int id = sc.nextInt();
-            sc.nextLine();
-
-            System.out.print("Senha: ");
-            String senha = sc.nextLine();
 
             Usuario usuario = new Usuario(senha, id);
             usuarioDao.insert(usuario);
@@ -80,22 +71,8 @@ public class Utilidades {
 
     }
 
-    public static void cadastrarProduto(Scanner sc) {
+    public static void cadastrarProduto(String descricao, Date data, int idSecao) {
         try {
-            System.out.println("-----------Cadastrar Produto-----------");
-
-            //sc.nextLine(); // Limpeza do buffer
-
-            System.out.print("Descrição: ");
-            String descricao = sc.nextLine();
-
-            System.out.print("ID da Seção: ");
-            int idSecao = sc.nextInt();
-            sc.nextLine();
-
-            System.out.print("Data de armazenamento (yyyy-mm-dd): ");
-            String dataStr = sc.nextLine();
-            Date data = Date.valueOf(dataStr);
 
             Secao secao = new Secao(idSecao, null); // Só o ID é necessário para inserção
             Produto produto = new Produto(456789, descricao, secao, data);
@@ -107,6 +84,64 @@ public class Utilidades {
             System.out.println("Erro ao cadastrar produto: " + e.getMessage());
         }
     }
+
+    public static void cadastrarPedido(int numeroPedido, int idUsuario, Date dataPedido) {
+        try {
+            // Cria o objeto Usuario apenas com o ID (a senha não é necessária para inserir o pedido)
+            Usuario usuario = new Usuario();
+            usuario.setId(idUsuario);
+
+            // Cria o objeto Pedido
+            Pedido pedido = new Pedido();
+            pedido.setId(numeroPedido);
+            pedido.setId_usuario(usuario);
+            pedido.setData_pedido(dataPedido);
+
+            // Cria o DAO e insere o pedido
+            pedidoDao.insert(pedido);
+
+            System.out.println("Pedido cadastrado com sucesso!\n");
+        } catch (Exception e) {
+            System.out.println("Erro ao cadastrar pedido: " + e.getMessage());
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public static void cadastrarLote(
+            int idProduto,
+            String destino,
+            int idCidade,
+            int idEstado,
+            String cep,
+            int idPedido
+    ) {
+        try {
+            // Instancie os objetos necessários apenas com o ID (ou busque do banco, se preferir)
+            Produto produto = new Produto();
+            produto.setId_produto(idProduto);
+
+            Cidade cidade = new Cidade();
+            cidade.setId(idCidade);
+
+            Estado estado = new Estado();
+            estado.setId_estado(idEstado);
+
+            Pedido pedido = new Pedido();
+            pedido.setId(idPedido);
+
+            // Crie o lote
+            Lote lote = new Lote(produto, destino, cidade, estado, cep, pedido);
+
+            // Insira usando o DAO
+            loteDao.insert(lote);
+
+            System.out.println("Lote cadastrado com sucesso!\n");
+        } catch (Exception e) {
+            System.out.println("Erro ao cadastrar lote: " + e.getMessage());
+        }
+    }
+
 
     public static void retirarProduto(Scanner sc) {
         System.out.print("Digite o ID do produto que deseja retirar: ");
@@ -134,7 +169,7 @@ public class Utilidades {
         }
     }
 
-    public static void criarPedido(Scanner sc) {
+    public static void criarPedido(int idProduto, String endereco, String cep, String nomeCidade, String siglaEstado, int numeroLote) {
         try {
             System.out.println("----------- Criar Pedido -----------");
 

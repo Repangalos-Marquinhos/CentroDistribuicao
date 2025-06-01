@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ProejetoCD" uuid="9d4502b6-3ad0-4c2c-bb2f-db6f1ff8bade">
-      <driver-ref>mysql.8</driver-ref>
+    <data-source source="LOCAL" name="Projeto_CD_java@serverfidelis.database.windows.net" uuid="7a874661-7a97-4334-b4bc-81d3fb8e1ba2">
+      <driver-ref>azure.ms</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://bancoprojetocd.cwmhtga7jrre.us-east-1.rds.amazonaws.com:3306/bancoprojetocd</jdbc-url>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://serverfidelis.database.windows.net:1433;database=Projeto_CD_java;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />

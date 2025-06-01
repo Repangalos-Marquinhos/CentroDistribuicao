@@ -55,10 +55,10 @@ public class Program {
 
             switch (opcao) {
                 case 0:
-                    if (isAdmin) Utilidades.cadastrarUsuario(sc);
+                   // if (isAdmin) Utilidades.cadastrarUsuario(sc);
                     break;
                 case 1:
-                    Utilidades.cadastrarProduto(sc);
+                    //Utilidades.cadastrarProduto(sc);
                     break;
                 case 2:
                     Utilidades.retirarProduto(sc);
@@ -67,7 +67,7 @@ public class Program {
                     Utilidades.listarProdutos();
                     break;
                 case 4:
-                    Utilidades.criarPedido(sc);
+                    //Utilidades.criarPedido(sc);
                     break;
                 case 5:
                     Utilidades.listarPedidos();
