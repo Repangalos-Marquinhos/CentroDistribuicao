@@ -7,6 +7,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import model.services.Utilidades;
 
 public class CadastroUsuarioController {
 
@@ -30,11 +31,11 @@ public class CadastroUsuarioController {
 
     @FXML
     private void onCadastrar() {
-        String id = txtId.getText();
+        String idStr = txtId.getText();
         String senha = txtSenha.getText();
         String permissao = comboPermissao.getValue();
 
-        if (id == null || id.trim().isEmpty() ||
+        if (idStr == null || idStr.trim().isEmpty() ||
                 senha == null || senha.trim().isEmpty() ||
                 permissao == null) {
 
@@ -42,16 +43,15 @@ public class CadastroUsuarioController {
             return;
         }
 
+        int id = Integer.parseInt(idStr);
+
         // Aqui você pode adicionar lógica para salvar no banco, por exemplo
         System.out.println("Usuario cadastrado: ");
-        System.out.println("ID: " + id );
+        System.out.println("ID: " + id);
         System.out.println("senha " + senha);
-        System.out.println("permissao: " + permissao );
+        System.out.println("permissao: " + permissao);
 
-        // Aqui você pode persistir o usuário no banco usando DAO
-        // Exemplo fictício:
-        // Usuario usuario = new Usuario(id, senha, permissao);
-        // usuarioDao.inserir(usuario);
+        Utilidades.cadastrarUsuario(senha, id);
 
         mostrarAlerta("Sucesso", "Usuário cadastrado com sucesso!");
 

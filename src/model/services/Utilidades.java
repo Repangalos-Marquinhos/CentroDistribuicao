@@ -55,18 +55,8 @@ public class Utilidades {
         System.out.println("+---------------------------------+");
     }
 
-    public static void cadastrarUsuario(Scanner sc) {
+    public static void cadastrarUsuario(String senha, int id) {
         try {
-            System.out.println("-----------Cadastrar Usuário-----------");
-
-            //sc.nextLine(); // Limpeza do buffer
-
-            System.out.print("ID: ");
-            int id = sc.nextInt();
-            sc.nextLine();
-
-            System.out.print("Senha: ");
-            String senha = sc.nextLine();
 
             Usuario usuario = new Usuario(senha, id);
             usuarioDao.insert(usuario);
@@ -80,22 +70,8 @@ public class Utilidades {
 
     }
 
-    public static void cadastrarProduto(Scanner sc) {
+    public static void cadastrarProduto(String descricao, Date data, int idSecao) {
         try {
-            System.out.println("-----------Cadastrar Produto-----------");
-
-            //sc.nextLine(); // Limpeza do buffer
-
-            System.out.print("Descrição: ");
-            String descricao = sc.nextLine();
-
-            System.out.print("ID da Seção: ");
-            int idSecao = sc.nextInt();
-            sc.nextLine();
-
-            System.out.print("Data de armazenamento (yyyy-mm-dd): ");
-            String dataStr = sc.nextLine();
-            Date data = Date.valueOf(dataStr);
 
             Secao secao = new Secao(idSecao, null); // Só o ID é necessário para inserção
             Produto produto = new Produto(456789, descricao, secao, data);
@@ -107,6 +83,7 @@ public class Utilidades {
             System.out.println("Erro ao cadastrar produto: " + e.getMessage());
         }
     }
+
 
     public static void retirarProduto(Scanner sc) {
         System.out.print("Digite o ID do produto que deseja retirar: ");
