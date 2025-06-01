@@ -1,10 +1,10 @@
 .root {
     -fx-font-family: "Arial";
-    -fx-background-color: #fffbe6;
+    -fx-background-color: #DAD5C0;
 }
 
 .button {
-    -fx-background-color: #e74c3c;
+    -fx-background-color: #654321;
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-cursor: hand;
@@ -12,7 +12,7 @@
 }
 
 .button:hover {
-    -fx-background-color: #c0392b;
+    -fx-background-color: #b0a786;
 }
 
 .label {
@@ -22,7 +22,7 @@
 }
 
 .sidebar {
-    -fx-background-color: #f1c40f;
+    -fx-background-color: #DAD5C0;
     -fx-padding: 10;
 }
 
