@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #85685a; -fx-background-radius: 15px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.CadastroLoteModalController">
+    <children>
+        <Label layoutX="20.0" layoutY="20.0" text="Cadastro de Novo Lote" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="20.0" layoutY="70.0" text="Data de Entrega:" textFill="WHITE" />
+        <DatePicker fx:id="datePicker" layoutX="150.0" layoutY="65.0" prefWidth="200.0" promptText="Selecione a Data de Entrega" />
+
+        <Label layoutX="20.0" layoutY="120.0" text="ID do Usuário:" textFill="WHITE" />
+        <TextField fx:id="txtUserId" layoutX="150.0" layoutY="115.0" prefWidth="200.0" promptText="Insira o ID do Usuário" />
+
+        <Label layoutX="20.0" layoutY="170.0" text="Nome do Usuário:" textFill="WHITE" />
+        <TextField fx:id="txtUserName" layoutX="150.0" layoutY="165.0" prefWidth="200.0" promptText="Insira o Nome do Usuário" />
+
+        <Button layoutX="150.0" layoutY="220.0" mnemonicParsing="false" onAction="#confirmarCadastro" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #654321; -fx-border-color: #000000;" text="Confirmar" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

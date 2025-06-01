@@ -1,10 +1,7 @@
 package model.dao.impl;
 
 import db.DB;
-import model.dao.CidadeDao;
-import model.dao.PedidoDao;
-import model.dao.ProdutoDao;
-import model.dao.UsuarioDao;
+import model.dao.*;
 import model.dao.impl.UsuarioDaoJDBC;
 import model.entities.Cidade;
 
@@ -27,6 +24,9 @@ public class DaoFactory {
         return new ProdutoDaoJDBC(DB.getConnection());
     }
 
+    public static LoteDao createLoteDao() {
+        return new LoteDaoJDBC(DB.getConnection());
+    }
 }
 
 

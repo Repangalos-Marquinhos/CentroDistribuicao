@@ -1,0 +1,46 @@
+/* Estilo base para o ComboBox */
+.combo-box {
+    -fx-background-color: #654321;
+    -fx-border-color: #000000;
+    -fx-text-fill: white;
+}
+
+/* Estilo para o texto dentro do ComboBox */
+.combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* Estilo para o botão de abertura do ComboBox */
+.combo-box .arrow-button {
+    -fx-background-color: #654321;
+}
+
+/* Estilo para a seta do ComboBox */
+.combo-box .arrow {
+    -fx-background-color: white;
+}
+
+/* Estilo para a lista suspensa do ComboBox */
+.combo-box-popup .list-view {
+    -fx-background-color: #654321;
+    -fx-border-color: #000000;
+}
+
+/* Estilo para os itens da lista suspensa */
+.combo-box-popup .list-cell {
+    -fx-background-color: #654321;
+    -fx-text-fill: white;
+}
+
+/* Estilo para o item selecionado na lista suspensa */
+.combo-box-popup .list-cell:filled:selected, .combo-box-popup .list-cell:filled:selected:hover {
+    -fx-background-color: #85685a;
+    -fx-text-fill: white;
+}
+
+/* Estilo para o item hover na lista suspensa */
+.combo-box-popup .list-cell:filled:hover {
+    -fx-background-color: #85685a;
+    -fx-text-fill: white;
+}

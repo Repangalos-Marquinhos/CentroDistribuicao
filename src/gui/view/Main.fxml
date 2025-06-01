@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="gui.controller.MainController">
+    <left>
+        <VBox spacing="10" styleClass="sidebar">
+            <Button onAction="#abrirCadastroUsuario" prefHeight="20.0" prefWidth="210.0" text="Cadastro de Usuário" />
+            <Button onAction="#abrirCadastroProdutosPedidos" prefHeight="20.0" prefWidth="210.0" text="Cadastro de Produtos e Pedidos" />
+            <Button onAction="#abrirHistoricoPedidos" prefHeight="20.0" prefWidth="210.0" text="Histórico de Pedidos" />
+            <Button onAction="#abrirGerenciarProdutos" prefHeight="20.0" prefWidth="210.0" text="Gerenciar Produtos" />
+            <Button onAction="#abrirGerenciarPedidos" prefHeight="20.0" prefWidth="210.0" text="Gerenciar Pedidos" />
+            <Button onAction="#abrirAlterarStatus" prefHeight="20.0" prefWidth="210.0" text="Alterar Status de Pedidos" />
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="conteudoArea" />
+    </center>
+</BorderPane>

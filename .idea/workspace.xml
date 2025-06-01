@@ -5,33 +5,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/AlterarStatusController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/CadastroLoteModalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/CadastroPedidosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/CadastroProdutosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/CadastroProdutosPedidosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/CadastroUsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/HistoricoPedidosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/PedidosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/ProdutosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/ViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/util/Alerts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/util/Constraints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/AlterarStatus.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/CadastroLoteModal.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/CadastroPedidos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/CadastroProdutos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/CadastroUsuario.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/HistoricoPedidos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/Main.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/Pedidos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/Produtos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/pedidos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/db/DB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/View.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/ViewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/dao/impl/DaoFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/View.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/DaoFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "gabrielbbruno"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gabrielbbruno&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Repangalos-Marquinhos/CentroDistribuicao.git",
-    "accountId": "6519951e-b324-4225-9f5f-ee70e18920c4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Repangalos-Marquinhos/CentroDistribuicao.git&quot;,
+    &quot;accountId&quot;: &quot;6519951e-b324-4225-9f5f-ee70e18920c4&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2xkT8PyA5NZ4e3KYapx251jg8WF" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -40,25 +84,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Executar JavaFX.executor": "Run",
-    "Application.Program.executor": "Run",
-    "Application.Program2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "branch__gabriel",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Executar JavaFX.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Program.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Program2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;branch__gabriel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Gabriel\Faculdade\CentroDistribuicao\src\gui\view" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Executar JavaFX">
     <configuration name="Executar JavaFX" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="application.Main" />
@@ -123,10 +177,19 @@
       <option name="presentableId" value="Default" />
       <updated>1748480914311</updated>
       <workItem from="1748480919124" duration="6863000" />
+      <workItem from="1748556817286" duration="9882000" />
+      <workItem from="1748567925727" duration="7319000" />
+      <workItem from="1748610913181" duration="6000000" />
+      <workItem from="1748652643565" duration="2596000" />
+      <workItem from="1748685648331" duration="57000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

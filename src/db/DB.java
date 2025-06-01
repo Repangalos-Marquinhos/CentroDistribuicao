@@ -6,8 +6,8 @@ public class DB {
 
     private static Connection conn = null;
 
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/project_java";
-    private static final String USUARIO = "developer";
+    private static final String URL = "jdbc:mysql://192.168.15.4:3306/project_java";
+    private static final String USUARIO = "usuario_remoto";
     private static final String SENHA = "1234567";
 
     public static Connection getConnection() {
