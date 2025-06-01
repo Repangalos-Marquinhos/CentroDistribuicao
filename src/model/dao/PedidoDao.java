@@ -1,20 +1,20 @@
-    package model.dao;
+package model.dao;
 
-    import model.entities.Pedido;
+import model.entities.Pedido;
 
-    import java.util.List;
+import java.util.List;
 
-    public interface PedidoDao {
+public interface PedidoDao {
 
-        void insert(Pedido pedido);
+    void insert(Pedido pedido);
 
-        void update(Pedido pedido);
+    void update(Pedido pedido);
 
-        void deleteById(int id);
+    void deleteById(int id);
 
-        Pedido findById(int id);
+    Pedido findById(int id);
 
-        List<Pedido> findAll();
+    List<Pedido> findAll();
 
-        List<Pedido> findByUsuarioId(int usuarioId);  // útil para listagem de pedidos por usuário
-    }
+    List<Pedido> findByUsuarioId(int usuarioId);  // útil para listagem de pedidos por usuário
+}

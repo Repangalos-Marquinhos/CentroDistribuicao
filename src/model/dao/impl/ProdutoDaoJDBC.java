@@ -22,12 +22,14 @@ public class ProdutoDaoJDBC implements ProdutoDao {
     public void insert(Produto produto) {
         PreparedStatement st = null;
         try {
+            // Inclua 'id_produto' na lista de colunas e adicione um placeholder para ele
             st = conn.prepareStatement(
-                    "INSERT INTO produtos (descricao, secao, data_armazenmento) VALUES (?, ?, ?)"
+                    "INSERT INTO produtos (id_produto, descricao, secao, data_armazenmento) VALUES (?, ?, ?, ?)"
             );
-            st.setString(1, produto.getDescricao());
-            st.setInt(2, produto.getSecao().getId_secao());
-            st.setDate(3, new java.sql.Date(produto.getData_armazenamento().getTime()));
+            st.setInt(1, produto.getId_produto()); // <-- FORNEÇA O ID MANUALMENTE
+            st.setString(2, produto.getDescricao());
+            st.setInt(3, produto.getSecao().getId_secao());
+            st.setDate(4, new java.sql.Date(produto.getData_armazenamento().getTime()));
             st.executeUpdate();
         } catch (SQLException e) {
             throw new DbException("Erro ao inserir produto: " + e.getMessage());
@@ -93,6 +95,30 @@ public class ProdutoDaoJDBC implements ProdutoDao {
             DB.closeStatement(st);
         }
     }
+
+    @Override
+    public List<Produto> findByDescricao(String descricao) {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        try {
+            st = conn.prepareStatement("SELECT * FROM produtos WHERE LOWER(descricao) LIKE ?");
+            st.setString(1, descricao);
+            rs = st.executeQuery();
+            List<Produto> list = new ArrayList<>();
+            while (rs.next()) {
+                Secao secao = new Secao(rs.getInt("secao"), rs.getString("descricao"));
+                Produto produto = new Produto(rs.getInt("id_produto"), rs.getString("descricao"), secao, rs.getDate("data_armazenmento"));
+                list.add(produto);
+            }
+            return list;
+        } catch (SQLException e) {
+            throw new DbException("Erro ao achar o produto: " + e.getMessage());
+        } finally {
+            DB.closeResultSet(rs);
+            DB.closeStatement(st);
+        }
+    }
+
 
     @Override
     public List<Produto> findAll() {

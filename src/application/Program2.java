@@ -15,7 +15,7 @@ import static model.services.Utilidades.calcularDistancia;
 public class Program2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-/*
+
         Connection conn = DB.getConnection();
 
         testSecaoDao(conn);
@@ -28,16 +28,16 @@ public class Program2 {
 
         DB.closeConnection();
 
-*/
 
-        calcularDistancia(sc);
+
+        //calcularDistancia(sc);
     }
 
     private static void testSecaoDao(Connection conn) {
         System.out.println("===== SecaoDao Tests =====");
         SecaoDao secaoDao = new SecaoDaoJDBC(conn);
 
-        Secao secao = new Secao(3233546, "Eletrônicos");
+        Secao secao = new Secao(12321, "Eletrônicos");
 
         secaoDao.insert(secao);
         System.out.println("Inserted: " + secao);

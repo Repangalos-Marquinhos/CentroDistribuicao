@@ -16,6 +16,10 @@ public class DaoFactory {
         return new CidadeDaoJDBC(DB.getConnection());
     }
 
+    public static LoteDao createLoteDao() {
+        return new LoteDaoJDBC(DB.getConnection());
+    }
+
     public static PedidoDao createPedidoDao() {
         return new PedidoDaoJDBC(DB.getConnection());
     }
@@ -24,9 +28,5 @@ public class DaoFactory {
         return new ProdutoDaoJDBC(DB.getConnection());
     }
 
-    public static LoteDao createLoteDao() {
-        return new LoteDaoJDBC(DB.getConnection());
-    }
 }
-
 
