@@ -6,9 +6,9 @@ public class DB {
 
     private static Connection conn = null;
 
-    private static final String URL = "jdbc:mysql://192.168.15.4:3306/project_java";
-    private static final String USUARIO = "usuario_remoto";
-    private static final String SENHA = "1234567";
+    private static final String URL = "jdbc:mysql://bancoprojetocd.cwmhtga7jrre.us-east-1.rds.amazonaws.com:3306/bancoprojetocd";
+    private static final String USUARIO = "admin";
+    private static final String SENHA = "[Q;l0nvB58]e";
 
     public static Connection getConnection() {
         if (conn == null) {
