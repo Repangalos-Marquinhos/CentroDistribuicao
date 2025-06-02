@@ -1,1 +1,29 @@
-.idea/workspace.xml
+# Arquivos de classe
+*.class
+
+# Arquivos de bytecode
+*.jar
+*.war
+*.ear
+
+# Diretório de build
+build/
+target/
+out/
+
+# Diretório de logs
+logs/
+
+# Diretório de dependências
+lib/
+
+# Configurações do Eclipse
+.settings/
+.project/
+
+# Configurações do IntelliJ IDEA
+.idea/
+
+
+# Arquivos de cache
+cache/
