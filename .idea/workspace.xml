@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/application/Program2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/controller/CadastroUsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controller/CadastroUsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/view/CadastroUsuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/view/CadastroUsuario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/PedidoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/PedidoDaoJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/UsuarioDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/UsuarioDaoJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/services/Utilidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/services/Utilidades.java" afterDir="false" />
-    </list>
+    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
