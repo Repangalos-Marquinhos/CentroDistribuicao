@@ -80,7 +80,7 @@ public class PedidoDaoJDBC implements PedidoDao {
             st.setInt(1, id);
             rs = st.executeQuery();
             if (rs.next()) {
-                Usuario usuario = new Usuario(rs.getString("senha"), rs.getInt("id_user"));
+                Usuario usuario = new Usuario(rs.getString("senha"), rs.getInt("id_user"), rs.getString("permissao"));
                 return new Pedido(rs.getDate("data_pedido"), rs.getInt("numero_pedido"), usuario);
             }
             return null;
@@ -105,7 +105,7 @@ public class PedidoDaoJDBC implements PedidoDao {
 
             List<Pedido> list = new ArrayList<>();
             while (rs.next()) {
-                Usuario usuario = new Usuario(rs.getString("senha"), rs.getInt("id_user") );
+                Usuario usuario = new Usuario(rs.getString("senha"), rs.getInt("id_user"), rs.getString("permissao") );
                 Pedido pedido = new Pedido(rs.getDate("data_pedido"), rs.getInt("numero_pedido"), usuario);
                 list.add(pedido);
             }
@@ -132,7 +132,7 @@ public class PedidoDaoJDBC implements PedidoDao {
 
             List<Pedido> list = new ArrayList<>();
             while (rs.next()) {
-                Usuario usuario = new Usuario(rs.getString("senha"),rs.getInt("id_user"));
+                Usuario usuario = new Usuario(rs.getString("senha"),rs.getInt("id_user"), rs.getString("permissao"));
                 Pedido pedido = new Pedido(rs.getDate("data_pedido"), rs.getInt("numero_pedido"), usuario);
                 list.add(pedido);
             }

@@ -6,14 +6,18 @@ public class Usuario {
 
     private int id_user;
     private String senha;
+    private String permissao;
 
     public Usuario() {}
 
-    public Usuario(String senha, int id_user) {
+    public Usuario(String senha, int id_user, String permissao) {
         this.id_user = id_user;
         this.senha = senha;
+        this.permissao = permissao;
 
     }
+
+
 
     public int getId() {
         return id_user;
@@ -37,6 +41,14 @@ public class Usuario {
 
     public void setUsuario(int usuario) {
         this.id_user = usuario;
+    }
+
+    public String getPermissao() {
+        return permissao;
+    }
+
+    public void setPermissao(String permissao) {
+        this.permissao = permissao;
     }
 
     @Override

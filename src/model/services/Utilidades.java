@@ -56,10 +56,10 @@ public class Utilidades {
         System.out.println("+---------------------------------+");
     }
 
-    public static void cadastrarUsuario(String senha, int id) {
+    public static void cadastrarUsuario(String senha, int id, String permissao) {
         try {
 
-            Usuario usuario = new Usuario(senha, id);
+            Usuario usuario = new Usuario(senha, id, permissao);
             usuarioDao.insert(usuario);
 
 
@@ -197,7 +197,7 @@ public class Utilidades {
             String dataStr = sc.nextLine();
             Date dataEntrega = Date.valueOf(dataStr);
 
-            Pedido pedido = new Pedido(dataEntrega, id_pedido , new Usuario("12345", 54));
+            Pedido pedido = new Pedido(dataEntrega, id_pedido , new Usuario("12345", 54, "admin"));
             pedidoDao.insert(pedido);
             System.out.println("Pedido criado com sucesso!\n");
 

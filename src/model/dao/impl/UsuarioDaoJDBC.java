@@ -21,10 +21,11 @@ public class UsuarioDaoJDBC implements UsuarioDao {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement(
-                    "INSERT INTO usuario (id_user, senha) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
+                    "INSERT INTO usuario (id_user, senha, permissao) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
             st.setInt(1, usuario.getUsuario());
             st.setString(2, usuario.getSenha());
+            st.setString(3, usuario.getPermissao());
 
             int rowsAffected = st.executeUpdate();
 
@@ -113,7 +114,8 @@ public class UsuarioDaoJDBC implements UsuarioDao {
     private Usuario instantiateUsuario(ResultSet rs) throws SQLException {
         return new Usuario(
                 rs.getString("senha"),
-                rs.getInt("id_user")
+                rs.getInt("id_user"),
+                rs.getString("permissao")
         );
     }
 }

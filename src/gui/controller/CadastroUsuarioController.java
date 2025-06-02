@@ -51,7 +51,7 @@ public class CadastroUsuarioController {
         System.out.println("senha " + senha);
         System.out.println("permissao: " + permissao);
 
-        Utilidades.cadastrarUsuario(senha, id);
+        Utilidades.cadastrarUsuario(senha, id, permissao);
 
         mostrarAlerta("Sucesso", "Usuário cadastrado com sucesso!");
 
