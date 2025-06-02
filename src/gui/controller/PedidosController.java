@@ -5,10 +5,18 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import model.dao.LoteDao;
 import model.dao.impl.DaoFactory;
 import model.entities.Lote;
@@ -17,6 +25,12 @@ import model.entities.Produto;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import javafx.stage.Stage;
 
 public class PedidosController {
     @FXML
@@ -38,8 +52,30 @@ public class PedidosController {
 
     private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
+
+    @FXML
+    private Button btnExcluir;
+
+
+
+
+    private Stage stage;
+
+    // Este método DEVE ser público!
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
     @FXML
     public void initialize() {
+
+        // Verifique se o botão não é null antes de configurar o evento
+        if (btnExcluir != null) {
+            btnExcluir.setOnAction(this::handleExcluir);
+        } else {
+            System.err.println("Erro: btnCadastrarLote não foi injetado pelo FXML");
+        }
+
         // Configurar a coluna do número do pedido
         numero_pedido.setCellValueFactory(data -> {
             Lote lote = data.getValue();
@@ -100,4 +136,33 @@ public class PedidosController {
         ObservableList<Lote> lotes = FXCollections.observableArrayList(loteDao.findAll());
         tabelaPedidos.setItems(lotes);
     }
+
+    private void handleExcluir(ActionEvent event) {
+        // Sua lógica para cadastrar novo lote
+        System.out.println("Botão excluir pressionado");
+
+        // Adicione aqui a chamada para abrir o modal
+        abrirModalExcluir();
+    }
+
+    private void abrirModalExcluir() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/ExcluirPedido.fxml"));
+            AnchorPane root = loader.load();
+
+            Stage modalStage = new Stage();
+            modalStage.initModality(Modality.APPLICATION_MODAL);
+            modalStage.initStyle(StageStyle.UNDECORATED);
+            modalStage.setScene(new Scene(root));
+
+            ExcluirPedidoController controller = loader.getController();
+            controller.setStage(modalStage);
+
+            modalStage.showAndWait();
+        } catch (Exception e) {
+            System.err.println("Erro ao abrir modal de Excluir Pedido");
+            e.printStackTrace();
+        }
+    }
+
 }

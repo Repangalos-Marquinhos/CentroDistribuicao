@@ -10,9 +10,9 @@ public interface LoteDao {
 
     void update(Lote lote);
 
-    void deleteByProdutoId(int produtoId);  // Exemplo de chave primária alternativa
+    void deleteBynumero_pedido(int produtoId, String destino);  // Exemplo de chave primária alternativa
 
-    Lote findByProdutoId(int produtoId); // Supondo que Produto seja chave em Lote
+    Lote findByNumeroPedidoAndDestino(int numeroPedido, String destino); // Supondo que Produto seja chave em Lote
 
     List<Lote> findAll();
 }

@@ -122,8 +122,8 @@ public class Program2 {
         loteDao.update(lote);
         System.out.println("Updated: " + lote);
 
-        Lote foundLote = loteDao.findByProdutoId(produto.getId_produto());
-        System.out.println("Found: " + foundLote);
+        //Lote foundLote = loteDao.findByProdutoId(produto.getId_produto());
+        //System.out.println("Found: " + foundLote);
 
         List<Lote> lotes = loteDao.findAll();
         lotes.forEach(System.out::println);

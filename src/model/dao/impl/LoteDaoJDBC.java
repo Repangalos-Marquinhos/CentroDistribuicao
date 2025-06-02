@@ -68,54 +68,46 @@ public class LoteDaoJDBC implements LoteDao {
     }
 
     @Override
-    public void deleteByProdutoId(int produtoId) {
+    public void deleteBynumero_pedido(int numero_pedido, String destino) {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement(
-                    "DELETE FROM lote WHERE id_produto = ?"
+                    "DELETE FROM lote WHERE numero_pedido = ? AND destino = ?"
             );
-
-            st.setInt(1, produtoId);
-
-
+            st.setInt(1, numero_pedido);
+            st.setString(2, destino);
             st.executeUpdate();
-
         } catch (SQLException e) {
-            throw new DbException("Erro ao deletar lote: " + e.getMessage());
+            throw new DbException("Erro ao buscar lote: " + e.getMessage());
         } finally {
+
             DB.closeStatement(st);
         }
     }
 
-    @Override
-    public Lote findByProdutoId(int produtoId){
+    public Lote findByNumeroPedidoAndDestino(int numeroPedido, String destino) {
         PreparedStatement st = null;
         ResultSet rs = null;
         try {
             st = conn.prepareStatement(
-                    "SELECT l.*, p.descricao, p.data_armazenmento, s.id_secao, "
-                            +"s.descricao AS nome_secao, c.id_cidade, c.cidade, e.id_estado, "
-                            +"e.UF AS estado, e.sigla, pd.numero_pedido AS id_pedido, pd.data_pedido, "
-                            +"u.id_user AS id_usuario, u.senha AS senha_usuario "
-                            +"FROM lote l JOIN produtos p ON l.id_produto = p.id_produto "
-                            +"JOIN secao s ON p.secao = s.id_secao "
-                            +"JOIN cidade c ON l.cidade = c.id_cidade "
-                            +"JOIN estado e ON l.estado = e.id_estado "
-                            +"JOIN pedido pd ON l.numero_pedido = pd.numero_pedido "
-                            +"JOIN usuario u ON pd.id_user = u.id_user "
-                            +"WHERE l.id_produto = ?;"
+                    "SELECT * FROM lote WHERE numero_pedido = ? AND destino = ?"
             );
-
-            st.setInt(1, produtoId);
-
+            st.setInt(1, numeroPedido);
+            st.setString(2, destino);
             rs = st.executeQuery();
-
             if (rs.next()) {
-                return instantiateLote(rs);
+                // Aqui você pode usar seu método instantiateLote, adaptando se necessário
+                // Exemplo simplificado:
+                // return instantiateLote(rs);
+                // Ou crie um Lote básico:
+                Lote lote = new Lote();
+                lote.setDestino(destino);
+                Pedido pedido = new Pedido();
+                pedido.setId(numeroPedido);
+                lote.setPedido(pedido);
+                return lote;
             }
-
             return null;
-
         } catch (SQLException e) {
             throw new DbException("Erro ao buscar lote: " + e.getMessage());
         } finally {

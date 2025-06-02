@@ -142,6 +142,18 @@ public class Utilidades {
         }
     }
 
+    public static void excluirLote(int id, String destino){
+
+        //Lote lote = loteDao.findByNumeroPedidoAndDestino(id, destino);
+        //if (lote == null) {
+         //   System.out.println("Lote não encontrado.\n");
+        //} else {
+            loteDao.deleteBynumero_pedido(id, destino);
+            System.out.println("Lote excluído com sucesso!\n");
+        //}
+
+    }
+
 
     public static void retirarProduto(Scanner sc) {
         System.out.print("Digite o ID do produto que deseja retirar: ");
