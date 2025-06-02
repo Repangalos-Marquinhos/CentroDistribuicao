@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="" />
+=======
+    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d4502b6-3ad0-4c2c-bb2f-db6f1ff8bade.xml" beforeDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,6 +154,7 @@
       <workItem from="1748791630424" duration="59000" />
       <workItem from="1748793191248" duration="55000" />
       <workItem from="1748794185442" duration="2781000" />
+      <workItem from="1748828786438" duration="457000" />
     </task>
     <servers />
   </component>
