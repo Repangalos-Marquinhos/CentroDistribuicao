@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="583.0" style="-fx-background-color: #C0C0C0; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+    <children>
+        <Label alignment="CENTER" layoutX="170.0" layoutY="90.0" prefHeight="78.0" prefWidth="243.0" style="-fx-background-color: #A9A9A9; -fx-background-radius: 15px;" text="LOGIN" textAlignment="CENTER">
+            <font>
+                <Font name="Arial Bold" size="36.0" />
+            </font>
+        </Label>
+        <PasswordField layoutX="164.0" layoutY="394.0" prefHeight="40.0" prefWidth="243.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </PasswordField>
+        <TextField layoutX="164.0" layoutY="266.0" prefHeight="40.0" prefWidth="243.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label alignment="CENTER" layoutX="197.0" layoutY="371.0" prefHeight="23.0" prefWidth="190.0" text="Senha">
+            <font>
+                <Font name="Arial" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="268.0" layoutY="247.0" text="Usuário">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
