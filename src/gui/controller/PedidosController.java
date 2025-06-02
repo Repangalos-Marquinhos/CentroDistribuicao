@@ -22,15 +22,10 @@ import model.dao.impl.DaoFactory;
 import model.entities.Lote;
 import model.entities.Pedido;
 import model.entities.Produto;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
-import javafx.stage.Stage;
 
 public class PedidosController {
     @FXML

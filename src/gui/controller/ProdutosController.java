@@ -38,10 +38,10 @@ public class ProdutosController {
     @FXML
     private TableColumn<Produto, Date> data_armazenamento;
 
-    ProdutoDao produtoDao = DaoFactory.createProdutoDao();
-
     @FXML
     private Button btnExcluir;
+
+    ProdutoDao produtoDao = DaoFactory.createProdutoDao();
 
     @FXML
     public void initialize() {
@@ -50,7 +50,7 @@ public class ProdutosController {
         if (btnExcluir != null) {
             btnExcluir.setOnAction(this::handleExcluir);
         } else {
-            System.err.println("Erro: btnCadastrarLote não foi injetado pelo FXML");
+            System.err.println("Erro: btnExcluir não foi injetado pelo FXML");
         }
 
         id_produto.setCellValueFactory(new PropertyValueFactory<>("id_produto"));
@@ -66,10 +66,10 @@ public class ProdutosController {
 
         System.out.println("Botão excluir pressionado");
 
-        abrirModalExcluir();
+        abrirModalExcluirProduto();
     }
 
-    private void abrirModalExcluir() {
+    private void abrirModalExcluirProduto() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/ExcluirProduto.fxml"));
             AnchorPane root = loader.load();
@@ -79,12 +79,12 @@ public class ProdutosController {
             modalStage.initStyle(StageStyle.UNDECORATED);
             modalStage.setScene(new Scene(root));
 
-            ExcluirPedidoController controller = loader.getController();
+            ExcluirProdutoController controller = loader.getController();
             controller.setStage(modalStage);
 
             modalStage.showAndWait();
         } catch (Exception e) {
-            System.err.println("Erro ao abrir modal de Excluir Pedido");
+            System.err.println("Erro ao abrir modal de Excluir Produto");
             e.printStackTrace();
         }
     }

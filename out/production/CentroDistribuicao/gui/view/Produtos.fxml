@@ -8,7 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.ProdutosController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="495.0" prefWidth="793.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gui.controller.ProdutosController">
     <children>
         <TableView fx:id="tabelaProdutos" layoutX="11.0" layoutY="181.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="299.0" prefWidth="771.0">
             <columns>
@@ -18,7 +23,7 @@
                 <TableColumn fx:id="data_armazenamento" prefWidth="222.4000244140625" resizable="false" text="Data de Armazenamento" />
             </columns>
         </TableView>
-        <Button layoutX="730.0" layoutY="14.0" mnemonicParsing="false" text="Excluir" />
+        <Button fx:id="btnExcluir" layoutX="730.0" layoutY="14.0" mnemonicParsing="false" text="Excluir" />
         <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" text="Alterar" />
         <TextField layoutX="169.0" layoutY="14.0" prefHeight="26.0" prefWidth="168.0" />
         <Button layoutX="337.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Lupa" />

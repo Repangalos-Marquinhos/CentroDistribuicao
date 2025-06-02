@@ -26,12 +26,12 @@ public class ExcluirPedidoController {
     }
 
     @FXML
-    private Button btnExcluir;
+    private Button btnExcluirPedido;
 
     @FXML
     public void initialize() {
         // Opcional: adicionar ação ao botão, caso não use onAction no FXML
-        btnExcluir.setOnAction(event -> excluirPedido());
+        btnExcluirPedido.setOnAction(event -> excluirPedido());
         btnCancelar.setOnAction(event -> stage.close());
     }
 

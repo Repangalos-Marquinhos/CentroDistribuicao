@@ -15,9 +15,6 @@ public class ExcluirProdutoController {
     @FXML
     private Button btnCancelar;
 
-    @FXML
-    private TextField txtDestino;
-
     private Stage stage;
 
     // ESTE MÉTODO DEVE SER PÚBLICO!
@@ -26,12 +23,12 @@ public class ExcluirProdutoController {
     }
 
     @FXML
-    private Button btnExcluir;
+    private Button btnExcluirProduto;
 
     @FXML
     public void initialize() {
         // Opcional: adicionar ação ao botão, caso não use onAction no FXML
-        btnExcluir.setOnAction(event -> excluirProduto());
+        btnExcluirProduto.setOnAction(event -> excluirProduto());
         btnCancelar.setOnAction(event -> stage.close());
     }
 
@@ -39,21 +36,20 @@ public class ExcluirProdutoController {
         String idProdutoStr = txtIdProduto.getText();
 
         if (idProdutoStr == null || idProdutoStr.isEmpty()) {
-            showAlert("Erro", "Informe o ID do pedido para excluir.", Alert.AlertType.ERROR);
+            showAlert("Erro", "Informe o ID do produto para excluir.", Alert.AlertType.ERROR);
             return;
         }
 
         try {
-            int idProduto= Integer.parseInt(idProdutoStr);
+            int idProduto = Integer.parseInt(idProdutoStr);
             Utilidades.excluirProduto(idProduto);
-            showAlert("Sucesso", "Pedido excluído com sucesso!", Alert.AlertType.INFORMATION);
+            showAlert("Sucesso", "Produto excluído com sucesso!", Alert.AlertType.INFORMATION);
             txtIdProduto.clear();
-
             stage.close();
         } catch (NumberFormatException e) {
             showAlert("Erro", "O ID deve ser um número inteiro.", Alert.AlertType.ERROR);
         } catch (Exception e) {
-            showAlert("Erro", "Erro ao excluir pedido: " + e.getMessage(), Alert.AlertType.ERROR);
+            showAlert("Erro", "Erro ao excluir produto: " + e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
