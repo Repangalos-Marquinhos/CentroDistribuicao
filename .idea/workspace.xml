@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="" />
+    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/gui/controller/ExcluirProdutoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/view/ExcluirProduto.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/controller/PedidosController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/controller/PedidosController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/controller/PedidosController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/controller/PedidosController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/controller/PedidosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/controller/PedidosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/controller/ProdutosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/gui/controller/ProdutosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CentroDistribuicao/model/services/Utilidades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/controller/PedidosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controller/PedidosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/controller/ProdutosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controller/ProdutosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/services/Utilidades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/services/Utilidades.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>

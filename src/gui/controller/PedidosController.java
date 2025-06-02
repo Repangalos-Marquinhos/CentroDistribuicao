@@ -56,9 +56,6 @@ public class PedidosController {
     @FXML
     private Button btnExcluir;
 
-
-
-
     private Stage stage;
 
     // Este método DEVE ser público!
@@ -138,7 +135,7 @@ public class PedidosController {
     }
 
     private void handleExcluir(ActionEvent event) {
-        // Sua lógica para cadastrar novo lote
+
         System.out.println("Botão excluir pressionado");
 
         // Adicione aqui a chamada para abrir o modal

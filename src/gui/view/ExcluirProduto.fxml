@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="224.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.ExcluirProdutoController">
+    <children>
+        <Label layoutX="26.0" layoutY="23.0" text="Excluir Produto">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtIdProduto" layoutX="26.0" layoutY="93.0" prefHeight="26.0" prefWidth="167.0" promptText="ID do Produto" />
+        <Button fx:id="btnExcluir" layoutX="26.0" layoutY="187.0" mnemonicParsing="false" text="Excluir" />
+        <Button fx:id="btnCancelar" layoutX="131.0" layoutY="187.0" mnemonicParsing="false" text="Cancelar" />
+    </children>
+</AnchorPane>

@@ -154,6 +154,11 @@ public class Utilidades {
 
     }
 
+    public static void excluirProduto(int id){
+        produtoDao.deleteById(id);
+        System.out.println("Produto excluído com sucesso!\n");
+    }
+
 
     public static void retirarProduto(Scanner sc) {
         System.out.print("Digite o ID do produto que deseja retirar: ");
