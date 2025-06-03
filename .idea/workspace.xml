@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="" />
-=======
     <list default="true" id="39690d6a-04bc-4fa3-9f5a-727948ea2ef1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CentroDistribuicao.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d4502b6-3ad0-4c2c-bb2f-db6f1ff8bade.xml" beforeDir="false" />
     </list>
->>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,21 +25,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
+    &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;gabrielbbruno&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Repangalos-Marquinhos/CentroDistribuicao.git&quot;,
     &quot;accountId&quot;: &quot;6519951e-b324-4225-9f5f-ee70e18920c4&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 8
-}</component>
+    &quot;customColor&quot;: &quot;&quot;,
+    &quot;associatedIndex&quot;: 8
+    }</component>
   <component name="ProjectId" id="2xkT8PyA5NZ4e3KYapx251jg8WF" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,7 +49,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
+    &quot;keyToString&quot;: {
     &quot;Application.Executar JavaFX.executor&quot;: &quot;Run&quot;,
     &quot;Application.Program.executor&quot;: &quot;Run&quot;,
     &quot;Application.Program2.executor&quot;: &quot;Run&quot;,
@@ -69,14 +65,14 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
+    },
+    &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
-      &quot;azure&quot;,
-      &quot;mysql&quot;
+    &quot;azure&quot;,
+    &quot;mysql&quot;
     ]
-  }
-}</component>
+    }
+    }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Gabriel\Faculdade\CentroDistribuicao\src\gui\view" />
