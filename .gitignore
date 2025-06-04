@@ -23,7 +23,17 @@ lib/
 
 # Configurações do IntelliJ IDEA
 .idea/
+.idea/workspace.xml
 
 
 # Arquivos de cache
 cache/
+
+# build folders
+bin/
+target/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
