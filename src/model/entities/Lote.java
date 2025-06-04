@@ -2,6 +2,8 @@ package model.entities;
 
 import java.util.Objects;
 
+
+//Muda no banco e depois alterar a classe também para pedido
 public class Lote {
 
     private Produto produto;
@@ -9,7 +11,7 @@ public class Lote {
     private Cidade cidade;
     private Estado estado;
     private String cep;
-    private Pedido pedido;
+    private Pedido pedido;  //Trocar o nome urgente para lote
 
     public Lote(Produto produto, String destino, Cidade cidade, Estado estado, String cep, Pedido pedido) {
         this.produto = produto;

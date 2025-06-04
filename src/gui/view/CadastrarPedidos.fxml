@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.view.CadastrarPedidos">
+   <children>
+      <Label text="Cadastrar Pedido">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button fx:id="btnNovoPedido" mnemonicParsing="false" onAction="#onBtnNovoPedidoAction" text="Novo" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="tableViewPedido" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableColumnProduto" prefWidth="75.0" text="Produto" />
+            <TableColumn fx:id="tableColumnDestino" prefWidth="75.0" text="Destino" />
+            <TableColumn fx:id="tableColumnCidade" prefWidth="75.0" text="Cidade" />
+            <TableColumn fx:id="tableColumnEstado" prefWidth="75.0" text="Estado" />
+            <TableColumn fx:id="tableColumnCEP" prefWidth="75.0" text="CEP" />
+            <TableColumn fx:id="tableColumnLote" prefWidth="75.0" text="Lote" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

@@ -58,7 +58,7 @@ public class Main2ViewController implements Initializable {
 
     @FXML
     public void onMenuItemCadastrarPedidoAction() {
-        System.out.println("Cadastrando novo Pedido");
+        loadView("/gui/view/CadastrarPedidos.fxml");
     }
 
     @FXML
