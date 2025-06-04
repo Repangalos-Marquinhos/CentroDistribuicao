@@ -14,11 +14,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CadastrarUsuarios implements Initializable {
+
     @FXML
     private TableView<Usuario> tableViewUsuarios;
 
     @FXML
-    private TableColumn<Usuario, Integer> tableColumnId;
+    private TableColumn<Usuario, Integer> tableColumnIdUsuario;
 
     @FXML
     private TableColumn<Usuario,String> tableColumnSenha;
@@ -27,11 +28,10 @@ public class CadastrarUsuarios implements Initializable {
     private TableColumn<Usuario,String> tableColumnPermissao;
 
     @FXML
-    private Button btnNovo;
+    private Button btnNovoUsuario;
 
     @FXML
-    public void onBtnNovoAction(){
-
+    public void onBtnNovoUsuarioAction(){
     }
 
 
@@ -41,12 +41,11 @@ public class CadastrarUsuarios implements Initializable {
     }
 
     private void initializeNodes() {
-        tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id_user"));
+        tableColumnIdUsuario.setCellValueFactory(new PropertyValueFactory<>("id_user"));
         tableColumnSenha.setCellValueFactory(new PropertyValueFactory<>("senha"));
         tableColumnPermissao.setCellValueFactory(new PropertyValueFactory<>("permissao"));
 
         Stage stage = (Stage) Main2.getMainScene().getWindow();
         tableViewUsuarios.prefHeightProperty().bind(stage.heightProperty());
-
     }
 }

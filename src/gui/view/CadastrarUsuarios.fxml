@@ -21,12 +21,12 @@
       </Label>
       <ToolBar prefHeight="40.0" prefWidth="200.0">
         <items>
-          <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#onBtnNovoAction" text="Novo" />
+          <Button fx:id="btnNovoUsuario" mnemonicParsing="false" onAction="#onBtnNovoUsuarioAction" text="Novo" />
         </items>
       </ToolBar>
       <TableView fx:id="tableViewUsuarios" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableColumnIdUsuario" prefWidth="75.0" text="ID" />
             <TableColumn fx:id="tableColumnSenha" prefWidth="75.0" text="Senha" />
             <TableColumn fx:id="tableColumnPermissao" prefWidth="75.0" text="Permissão" />
         </columns>
