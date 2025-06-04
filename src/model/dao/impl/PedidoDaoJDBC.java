@@ -12,7 +12,7 @@ import java.util.List;
 
 public class PedidoDaoJDBC implements PedidoDao {
 
-    private Connection conn;
+    private final Connection conn;
 
     public PedidoDaoJDBC(Connection conn) {
         this.conn = conn;

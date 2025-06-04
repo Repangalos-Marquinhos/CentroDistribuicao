@@ -45,7 +45,7 @@ public class PedidosController {
 
     LoteDao loteDao = DaoFactory.createLoteDao();
 
-    private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    private final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 
     @FXML

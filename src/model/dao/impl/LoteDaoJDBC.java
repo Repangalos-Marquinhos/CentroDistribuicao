@@ -11,7 +11,7 @@ import java.util.List;
 
 public class LoteDaoJDBC implements LoteDao {
 
-    private Connection conn;
+    private final Connection conn;
 
     public LoteDaoJDBC(Connection conn) {
         this.conn = conn;

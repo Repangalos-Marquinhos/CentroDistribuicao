@@ -11,7 +11,7 @@ import java.util.List;
 
 public class EstadoDaoJDBC implements EstadoDao {
 
-    private Connection conn;
+    private final Connection conn;
 
     public EstadoDaoJDBC(Connection conn) {
         this.conn = conn;

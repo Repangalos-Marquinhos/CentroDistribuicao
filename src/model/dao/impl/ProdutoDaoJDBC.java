@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoDaoJDBC implements ProdutoDao {
-    private Connection conn;
+    private final Connection conn;
 
     public ProdutoDaoJDBC(Connection conn) {
         this.conn = conn;

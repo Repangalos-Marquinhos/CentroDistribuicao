@@ -11,7 +11,7 @@ import java.util.List;
 
 public class SecaoDaoJDBC implements SecaoDao {
 
-    private Connection conn;
+    private final Connection conn;
 
     public SecaoDaoJDBC(Connection conn) {
         this.conn = conn;

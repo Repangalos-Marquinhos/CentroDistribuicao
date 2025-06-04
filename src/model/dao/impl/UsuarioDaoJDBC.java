@@ -11,7 +11,7 @@ import java.util.List;
 
 public class UsuarioDaoJDBC implements UsuarioDao {
 
-    private Connection conn;
+    private final Connection conn;
 
     public UsuarioDaoJDBC(Connection conn) {
         this.conn = conn;

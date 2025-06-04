@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CidadeDaoJDBC implements CidadeDao {
 
-    private Connection conn;
+    private final Connection conn;
 
     public CidadeDaoJDBC(Connection conn) {
         this.conn = conn;
