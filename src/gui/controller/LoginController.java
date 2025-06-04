@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.Parent;
@@ -29,7 +31,9 @@ public class LoginController {
         try {
             usuario = Integer.parseInt(usuarioStr);
         } catch (NumberFormatException e) {
-            System.out.println("Usuário inválido!");
+            mostrarAlerta("Usuário inválido!");
+            txtUsuario.clear();
+            txtSenha.clear();
             return;
         }
 
@@ -54,8 +58,18 @@ public class LoginController {
                 e.printStackTrace();
             }
         } else {
-            System.out.println("Usuário ou senha inválidos!");
+            mostrarAlerta("Usuário ou senha inválidos!");
+            txtUsuario.clear();
+            txtSenha.clear();
         }
+    }
 
+    // Método auxiliar para mostrar o pop-up
+    private void mostrarAlerta(String mensagem) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erro de Login");
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
     }
 }
