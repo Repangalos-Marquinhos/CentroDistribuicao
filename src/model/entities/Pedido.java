@@ -12,6 +12,14 @@ public class Pedido {
     private int id;
     private Date data_pedido;
     private  Usuario id_usuario;//new Usuario("12345", 54)
+    private String status;
+
+    public Pedido(Date data_pedido, int id, Usuario id_usuario, String status) {
+        this.data_pedido = data_pedido;
+        this.id = id;
+        this.id_usuario = id_usuario;
+        this.status = status;
+    }
 
     public Pedido(Date data_pedido, int id, Usuario id_usuario) {
         this.data_pedido = data_pedido;
@@ -21,6 +29,14 @@ public class Pedido {
 
     public Pedido() {
 
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Date getData_pedido() {

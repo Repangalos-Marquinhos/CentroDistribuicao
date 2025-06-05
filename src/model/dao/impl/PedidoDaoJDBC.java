@@ -54,6 +54,22 @@ public class PedidoDaoJDBC implements PedidoDao {
         }
     }
 
+    public void updateStatusPedido(int numeroPedido, String novoStatus) {
+        PreparedStatement st = null;
+        try {
+            st = conn.prepareStatement(
+                    "UPDATE pedido SET status = ? WHERE numero_pedido = ?"
+            );
+            st.setString(1, novoStatus);
+            st.setInt(2, numeroPedido);
+            st.executeUpdate();
+        } catch (SQLException e) {
+            throw new DbException("Erro ao atualizar status do pedido: " + e.getMessage());
+        } finally {
+            DB.closeStatement(st);
+        }
+    }
+
     @Override
     public void deleteById(int id) {
         PreparedStatement st = null;
@@ -65,6 +81,34 @@ public class PedidoDaoJDBC implements PedidoDao {
             throw new DbException("Erro ao deletar pedido: " + e.getMessage());
         } finally {
             DB.closeStatement(st);
+        }
+    }
+
+    public List<Pedido> findByStatus(String status) {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        try {
+            st = conn.prepareStatement(
+                    "SELECT * FROM pedido WHERE status = ?"
+            );
+            st.setString(1, status);
+            rs = st.executeQuery();
+
+            List<Pedido> list = new ArrayList<>();
+            while (rs.next()) {
+                Pedido pedido = new Pedido();
+                pedido.setId(rs.getInt("numero_pedido"));
+                pedido.setData_pedido(rs.getDate("data_pedido"));
+                pedido.setStatus(rs.getString("status"));
+                // Adicione outros campos conforme necessário
+                list.add(pedido);
+            }
+            return list;
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao buscar pedidos por status: " + e.getMessage());
+        } finally {
+            try { if (rs != null) rs.close(); } catch (SQLException ignored) {}
+            try { if (st != null) st.close(); } catch (SQLException ignored) {}
         }
     }
 

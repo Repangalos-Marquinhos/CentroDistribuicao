@@ -116,6 +116,50 @@ public class LoteDaoJDBC implements LoteDao {
         }
     }
 
+    public List<Lote> findLotesByPedidoStatus(String status) {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        try {
+            st = conn.prepareStatement(
+                    "SELECT l.*, ped.status FROM lote l " +
+                            "JOIN pedido ped ON l.numero_pedido = ped.numero_pedido " +
+                            "WHERE ped.status = ?"
+            );
+            st.setString(1, status);
+            rs = st.executeQuery();
+
+            List<Lote> list = new ArrayList<>();
+            while (rs.next()) {
+                // Instancie o Lote e o Pedido, setando o status
+                Lote lote = instantiateLote(rs);
+                lote.getPedido().setStatus(rs.getString("status"));
+                list.add(lote);
+            }
+            return list;
+        } catch (SQLException e) {
+            throw new DbException("Erro ao buscar lotes por status do pedido: " + e.getMessage());
+        } finally {
+            DB.closeResultSet(rs);
+            DB.closeStatement(st);
+        }
+    }
+
+    public void updateStatusPedido(int numeroPedido, String novoStatus) {
+        PreparedStatement st = null;
+        try {
+            st = conn.prepareStatement(
+                    "UPDATE pedido SET status = ? WHERE numero_pedido = ?"
+            );
+            st.setString(1, novoStatus);
+            st.setInt(2, numeroPedido);
+            st.executeUpdate();
+        } catch (SQLException e) {
+            throw new DbException("Erro ao atualizar status do pedido: " + e.getMessage());
+        } finally {
+            DB.closeStatement(st);
+        }
+    }
+
 
     @Override
     public List<Lote> findAll() {
@@ -123,14 +167,12 @@ public class LoteDaoJDBC implements LoteDao {
         ResultSet rs = null;
         try {
             st = conn.prepareStatement(
-                    "SELECT ped.numero_pedido, p.descricao, "
-                            +"p.data_armazenmento, s.id_secao, "
-                            +"s.descricao AS nome_secao, l.destino, "
-                            +"ped.data_pedido "
-                            +"FROM lote l "
-                            +"JOIN produtos p ON l.id_produto = p.id_produto "
-                            +"JOIN secao s ON p.secao = s.id_secao "
-                            +"JOIN pedido ped ON l.numero_pedido = ped.numero_pedido;"
+                    "SELECT ped.numero_pedido, p.descricao, p.data_armazenmento, s.id_secao, " +
+                            "s.descricao AS nome_secao, l.destino, ped.data_pedido, ped.status " +
+                            "FROM lote l " +
+                            "JOIN produtos p ON l.id_produto = p.id_produto " +
+                            "JOIN secao s ON p.secao = s.id_secao " +
+                            "JOIN pedido ped ON l.numero_pedido = ped.numero_pedido;"
             );
 
             rs = st.executeQuery();
@@ -146,6 +188,7 @@ public class LoteDaoJDBC implements LoteDao {
                 Pedido pedido = new Pedido();
                 pedido.setId(rs.getInt("numero_pedido"));
                 pedido.setData_pedido(rs.getDate("data_pedido"));
+                pedido.setStatus(rs.getString("status")); // <-- novo campo
 
 // ou use o construtor se tiver um
 
@@ -187,11 +230,10 @@ public class LoteDaoJDBC implements LoteDao {
         usuario.setId(rs.getInt("id_usuario"));
         usuario.setSenha(rs.getString("senha_usuario"));
 
-        Pedido pedido = new Pedido(
-                rs.getDate("data_pedido"),
-                rs.getInt("id_pedido"),
-                usuario
-        );
+        Pedido pedido = new Pedido();
+        pedido.setId(rs.getInt("id_pedido"));
+        pedido.setData_pedido(rs.getDate("data_pedido"));
+        pedido.setStatus(rs.getString("status")); // <-- novo campo
 
         return new Lote(produto, rs.getString("destino"), cidade, estado, rs.getString("cep"), pedido);
     }

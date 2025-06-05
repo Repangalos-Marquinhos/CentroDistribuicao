@@ -10,6 +10,10 @@ public interface PedidoDao {
 
     void update(Pedido pedido);
 
+    void updateStatusPedido(int numeroPedido, String novoStatus);
+
+    List<Pedido> findByStatus(String status);
+
     void deleteById(int id);
 
     Pedido findById(int id);
