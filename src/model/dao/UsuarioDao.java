@@ -15,4 +15,8 @@ public interface UsuarioDao {
     Usuario findById(int id);
 
     List<Usuario> findAll();
+
+    Usuario findByUsuarioAndSenha(int usuario, String senha);
+// ou, se o login for String:
+// Usuario findByUsuarioAndSenha(String usuario, String senha);
 }
