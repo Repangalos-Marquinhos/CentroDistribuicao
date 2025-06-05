@@ -49,6 +49,6 @@ public class MainController {
     }
 
     @FXML public void abrirAlterarStatus() {
-        carregarTela("AlterarStatus.fxml");
+        carregarTela("/gui/view/AlterarStatus.fxml");
     }
 }
