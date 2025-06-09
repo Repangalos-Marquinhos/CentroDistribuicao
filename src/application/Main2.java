@@ -15,7 +15,7 @@ public class Main2 extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/loginTeste.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/Main2View.fxml"));
             ScrollPane scrollPane = loader.load();
 
 

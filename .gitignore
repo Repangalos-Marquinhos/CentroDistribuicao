@@ -22,8 +22,10 @@ lib/
 .project/
 
 # Configurações do IntelliJ IDEA
-.idea/
-.idea/workspace.xml
+.idea
+*.iws
+*.iml
+*.ipr
 
 
 # Arquivos de cache
