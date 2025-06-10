@@ -10,8 +10,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/gui/view/AlterarStatus.fxml"));
-            Scene scene = new Scene(root, 800, 600);
+            Parent root = FXMLLoader.load(getClass().getResource("/gui/view/loginTeste.fxml"));
+            Scene scene = new Scene(root, 1025, 631);
             primaryStage.setTitle("Painel Administrativo");
             primaryStage.setScene(scene);
             primaryStage.show();

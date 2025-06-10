@@ -43,6 +43,9 @@ public class PedidosController {
     @FXML
     private TableColumn<Lote, Date> data_Pedido;
 
+    @FXML
+    private TableColumn<Lote, Pedido> status;
+
     LoteDao loteDao = DaoFactory.createLoteDao();
 
     private final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");

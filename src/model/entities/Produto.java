@@ -5,12 +5,12 @@ import java.util.Objects;
 
 public class Produto {
 
-    private int id_produto;
+    private Integer id_produto;
     private String descriçao;
     private Secao secao;
     private Date data_armazenamento;
 
-    public Produto(int id_produto, String descriçao, Secao secao, Date data_armazenamento) {
+    public Produto(Integer id_produto, String descriçao, Secao secao, Date data_armazenamento) {
         this.id_produto = id_produto;
         this.descriçao = descriçao;
         this.secao = secao;
@@ -39,7 +39,7 @@ public class Produto {
         return id_produto;
     }
 
-    public void setId_produto(int id_produto) {
+    public void setId_produto(Integer id_produto) {
         this.id_produto = id_produto;
     }
 

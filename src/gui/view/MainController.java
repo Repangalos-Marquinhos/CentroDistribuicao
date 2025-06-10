@@ -1,4 +1,4 @@
-package gui.controller;
+package gui.view;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,9 +25,13 @@ public class MainController {
         carregarTela("CadastroUsuario.fxml");
     }
 
-    @FXML public void abrirCadastroProdutosPedidos() {
-        carregarTela("CadastroProdutosPedidos.fxml");
+    @FXML public void abrirCadastroProdutos() {
+        carregarTela("CadastroProdutos.fxml");
     }
+    @FXML public void abrirCadastroPedidos() {
+        carregarTela("CadastroPedidos.fxml");
+    }
+
 
     @FXML public void abrirHistoricoPedidos() {
         try {
@@ -49,6 +53,13 @@ public class MainController {
     }
 
     @FXML public void abrirAlterarStatus() {
-        carregarTela("/gui/view/AlterarStatus.fxml");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AlterarStatus.fxml"));
+            Parent pedidosView = loader.load();
+            conteudoArea.getChildren().clear();
+            conteudoArea.getChildren().add(pedidosView);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

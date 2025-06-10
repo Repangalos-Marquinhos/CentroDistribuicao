@@ -75,7 +75,7 @@ public class Utilidades {
         try {
 
             Secao secao = new Secao(idSecao, null); // Só o ID é necessário para inserção
-            Produto produto = new Produto(456789, descricao, secao, data);
+            Produto produto = new Produto(9, descricao, secao, data);
 
             produtoDao.insert(produto);
             System.out.println("Produto cadastrado com sucesso!\n");

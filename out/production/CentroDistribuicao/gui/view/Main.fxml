@@ -5,11 +5,12 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="gui.controller.MainController">
+<BorderPane prefHeight="769.0" prefWidth="1225.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.view.MainController">
     <left>
         <VBox spacing="10" styleClass="sidebar">
             <Button onAction="#abrirCadastroUsuario" prefHeight="20.0" prefWidth="210.0" text="Cadastro de Usuário" />
-            <Button onAction="#abrirCadastroProdutosPedidos" prefHeight="20.0" prefWidth="210.0" text="Cadastro de Produtos e Pedidos" />
+            <Button onAction="#abrirCadastroProdutos" prefHeight="20.0" prefWidth="210.0" text="Cadastro de Produtos" />
+         <Button mnemonicParsing="false" onAction="#abrirCadastroPedidos" prefHeight="20.0" prefWidth="210.0" text="Cadastro de Pedidos" />
             <Button onAction="#abrirHistoricoPedidos" prefHeight="20.0" prefWidth="210.0" text="Histórico de Pedidos" />
             <Button onAction="#abrirGerenciarProdutos" prefHeight="20.0" prefWidth="210.0" text="Gerenciar Produtos" />
             <Button onAction="#abrirGerenciarPedidos" prefHeight="20.0" prefWidth="210.0" text="Gerenciar Pedidos" />

@@ -7,26 +7,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="463.0" prefWidth="326.0"
-            xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            fx:controller="gui.controller.AlterarStatusController">
-    <Label layoutX="20" layoutY="20" text="AlterarStatus">
+<AnchorPane prefHeight="463.0" prefWidth="326.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.AlterarStatusController">
+    <Label layoutX="41.0" layoutY="23.0" text="AlterarStatus">
         <font>
             <Font name="System Bold" size="30.0" />
         </font>
     </Label>
-    <Label layoutX="20.0" layoutY="83.0" text="Digite o ID do pedido">
+    <Label layoutX="41.0" layoutY="84.0" text="Digite o ID do pedido">
         <font>
             <Font name="System Bold" size="14.0" />
         </font>
     </Label>
-    <TextField fx:id="txtPedidoId" layoutX="20.0" layoutY="115.0" promptText="ID" />
-    <Label layoutX="20.0" layoutY="161.0" text="Selecione o novo Status:">
+    <TextField fx:id="txtPedidoId" layoutX="41.0" layoutY="113.0" promptText="ID" />
+    <Label layoutX="41.0" layoutY="161.0" text="Selecione o novo Status:">
         <font>
             <Font name="System Bold" size="14.0" />
         </font>
     </Label>
-    <ComboBox fx:id="comboStatus" layoutX="16.0" layoutY="195.0" prefWidth="150.0" promptText="Status" />
-    <Button layoutX="16.0" layoutY="250.0" prefWidth="150.0" text="Alterar Status" onAction="#onAlterarStatus"/>
+    <ComboBox fx:id="comboStatus" layoutX="38.0" layoutY="195.0" prefWidth="150.0" promptText="Status" />
+    <Button layoutX="39.0" layoutY="248.0" onAction="#onAlterarStatus" prefWidth="150.0" text="Alterar Status" />
 </AnchorPane>

@@ -1,5 +1,6 @@
-package gui.controller;
+package gui.view;
 
+import gui.controller.CadastroLoteModalController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
